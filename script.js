@@ -1,17 +1,14 @@
-const products = [
-  {id:1, name:"Pegamento Osito", category:"Pegamentos", price:1200, emoji:"🐻", desc:"Pegamento en barra con diseño tierno."},
-  {id:2, name:"Pegamento Glitter", category:"Pegamentos", price:1500, emoji:"✨", desc:"Ideal para manualidades y bullet journal."},
-  {id:3, name:"Stickers Holográficos", category:"Stickers", price:2500, emoji:"🌸", desc:"Set de stickers holográficos."},
-  {id:4, name:"Stickers Animalitos", category:"Stickers", price:2000, emoji:"🐰", desc:"Animalitos en colores pastel."},
-  {id:5, name:"Post-it Patitas", category:"Post-it", price:1000, emoji:"🐾", desc:"Notas adhesivas con forma de patitas."},
-  {id:6, name:"Mini Block Kawaii", category:"Post-it", price:1600, emoji:"🎀", desc:"Mini notas con diseños adorables."},
-  {id:7, name:"Washi Tape Arte", category:"Washi Tape", price:3500, emoji:"🎨", desc:"Cintas decorativas para tus proyectos."},
-  {id:8, name:"Goma Macaron", category:"Gomas", price:900, emoji:"🧁", desc:"Goma con forma de pastelito."},
-  {id:9, name:"Goma Patita", category:"Gomas", price:1400, emoji:"🐱", desc:"Goma retráctil con diseño de gato."},
-  {id:10, name:"Sacapuntas Osito", category:"Sacapuntas", price:1200, emoji:"🧸", desc:"Sacapuntas con depósito."},
-  {id:11, name:"Lápiz Gel Pastel", category:"Lápices", price:2500, emoji:"✏️", desc:"Set de lápices en tonos pastel."},
-  {id:12, name:"Lonchera Kawaii", category:"Loncheras", price:8900, emoji:"🍱", desc:"Lonchera térmica con diseño kawaii."}
-];
+let products = [];
+
+fetch("products.json")
+  .then(response => response.json())
+  .then(data => {
+    products = data;
+    renderCategories();
+    renderProducts();
+    renderCart();
+  })
+  .catch(error => console.error("Error al cargar el catálogo:", error));
 
 const categories = ["Todos", ...new Set(products.map(p => p.category))];
 let currentCategory = "Todos";
