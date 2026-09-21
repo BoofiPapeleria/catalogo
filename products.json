@@ -1,12 +1,12 @@
 [
   {
     "id": 1,
-    "name": "Pegamento Osito",
+    "name": "Pegamento Líquido",
     "category": "Pegamentos",
-    "price": 1200,
-    "emoji": "🐻",
+    "price": 1500,
+    "emoji": "",
     "image": "images/pegamento-osito.jpg",
-    "desc": "Pegamento en barra con diseño tierno."
+    "desc": "Pegamento líquido."
   },
   {
     "id": 2,
