@@ -46,7 +46,9 @@ function renderProducts() {
 
   $("products").innerHTML = filtered.map(product => `
     <article class="card">
-      <div class="product-image">${product.emoji}</div>
+      <div class="product-image">
+        ${product.image ? `<img src="${product.image}" alt="${product.name}" style="max-width:100%;max-height:100%;border-radius:15px;">` : product.emoji}
+      </div>
       <h3>${product.name}</h3>
       <p>${product.desc}</p>
       <div class="card-bottom">
@@ -56,6 +58,7 @@ function renderProducts() {
     </article>
   `).join("");
 }
+
 
 function addToCart(id) {
   const product = products.find(p => p.id === id);
