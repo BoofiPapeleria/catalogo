@@ -4,6 +4,7 @@ const products = [
     name: "Pegamento Liquido",
     category: "Pegamentos",
     price: 1500,
+    image:"images/pegamento-liquido.png"
     desc: "Pegamento líquido de 150 ml, su fórmula garantiza una adherencia fuerte y duradera en papel, cartón y otros materiales ligeros.",
   },
   {
