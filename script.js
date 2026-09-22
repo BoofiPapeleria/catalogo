@@ -4,15 +4,13 @@ const products = [
     name: "Pegamento Liquido",
     category: "Pegamentos",
     price: 1500,
-    emoji: "🐻",
     desc: "Pegamento líquido de 150 ml, su fórmula garantiza una adherencia fuerte y duradera en papel, cartón y otros materiales ligeros.",
   },
   {
     id: 2,
-    name: "Pegamento Glitter",
+    name: "Pegamento",
     category: "Pegamentos",
     price: 1500,
-    emoji: "✨",
     desc: "Ideal para manualidades y bullet journal.",
   },
   {
