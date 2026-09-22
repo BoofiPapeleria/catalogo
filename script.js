@@ -1,5 +1,5 @@
 const products = [
-  { id: 1, name: "Pegamento Líquido", category: "Pegamentos", price: 1500, images:, desc: "Pegamento líquido de 150 ml, su fórmula garantiza una adherencia fuerte y duradera en papel, cartón y otros materiales ligeros" },
+  {id:1, name:"Pegamento Líquido", category:"Pegamentos", price:1500, images:, desc:"Pegamento líquido de 150 ml, su fórmula garantiza una adherencia fuerte y duradera en papel, cartón y otros materiales ligeros" },
   {id:2, name:"Pegamento Glitter", category:"Pegamentos", price:1500, emoji:"✨", desc:"Ideal para manualidades y bullet journal."},
   {id:3, name:"Stickers Holográficos", category:"Stickers", price:2500, emoji:"🌸", desc:"Set de stickers holográficos."},
   {id:4, name:"Stickers Animalitos", category:"Stickers", price:2000, emoji:"🐰", desc:"Animalitos en colores pastel."},
