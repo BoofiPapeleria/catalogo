@@ -1,11 +1,11 @@
 const products = [
   {
     id: 1,
-    name: "Pegamento Osito",
+    name: "Pegamento Liquido",
     category: "Pegamentos",
-    price: 1200,
+    price: 1500,
     emoji: "🐻",
-    desc: "Pegamento en barra con diseño tierno.",
+    desc: "Pegamento líquido de 150 ml, su fórmula garantiza una adherencia fuerte y duradera en papel, cartón y otros materiales ligeros.",
   },
   {
     id: 2,
