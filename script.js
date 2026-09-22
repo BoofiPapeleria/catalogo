@@ -1,31 +1,118 @@
 const products = [
-  {id:1, name:"Pegamento Osito", category:"Pegamentos", price:1200, emoji:"🐻", desc:"Pegamento en barra con diseño tierno."},
-  {id:2, name:"Pegamento Glitter", category:"Pegamentos", price:1500, emoji:"✨", desc:"Ideal para manualidades y bullet journal."},
-  {id:3, name:"Stickers Holográficos", category:"Stickers", price:2500, emoji:"🌸", desc:"Set de stickers holográficos."},
-  {id:4, name:"Stickers Animalitos", category:"Stickers", price:2000, emoji:"🐰", desc:"Animalitos en colores pastel."},
-  {id:5, name:"Post-it Patitas", category:"Post-it", price:1000, emoji:"🐾", desc:"Notas adhesivas con forma de patitas."},
-  {id:6, name:"Mini Block Kawaii", category:"Post-it", price:1600, emoji:"🎀", desc:"Mini notas con diseños adorables."},
-  {id:7, name:"Washi Tape Arte", category:"Washi Tape", price:3500, emoji:"🎨", desc:"Cintas decorativas para tus proyectos."},
-  {id:8, name:"Goma Macaron", category:"Gomas", price:900, emoji:"🧁", desc:"Goma con forma de pastelito."},
-  {id:9, name:"Goma Patita", category:"Gomas", price:1400, emoji:"🐱", desc:"Goma retráctil con diseño de gato."},
-  {id:10, name:"Sacapuntas Osito", category:"Sacapuntas", price:1200, emoji:"🧸", desc:"Sacapuntas con depósito."},
-  {id:11, name:"Lápiz Gel Pastel", category:"Lápices", price:2500, emoji:"✏️", desc:"Set de lápices en tonos pastel."},
-  {id:12, name:"Lonchera Kawaii", category:"Loncheras", price:8900, emoji:"🍱", desc:"Lonchera térmica con diseño kawaii."}
+  {
+    id: 1,
+    name: "Pegamento Osito",
+    category: "Pegamentos",
+    price: 1200,
+    emoji: "🐻",
+    desc: "Pegamento en barra con diseño tierno.",
+  },
+  {
+    id: 2,
+    name: "Pegamento Glitter",
+    category: "Pegamentos",
+    price: 1500,
+    emoji: "✨",
+    desc: "Ideal para manualidades y bullet journal.",
+  },
+  {
+    id: 3,
+    name: "Stickers Holográficos",
+    category: "Stickers",
+    price: 2500,
+    emoji: "🌸",
+    desc: "Set de stickers holográficos.",
+  },
+  {
+    id: 4,
+    name: "Stickers Animalitos",
+    category: "Stickers",
+    price: 2000,
+    emoji: "🐰",
+    desc: "Animalitos en colores pastel.",
+  },
+  {
+    id: 5,
+    name: "Post-it Patitas",
+    category: "Post-it",
+    price: 1000,
+    emoji: "🐾",
+    desc: "Notas adhesivas con forma de patitas.",
+  },
+  {
+    id: 6,
+    name: "Mini Block Kawaii",
+    category: "Post-it",
+    price: 1600,
+    emoji: "🎀",
+    desc: "Mini notas con diseños adorables.",
+  },
+  {
+    id: 7,
+    name: "Washi Tape Arte",
+    category: "Washi Tape",
+    price: 3500,
+    emoji: "🎨",
+    desc: "Cintas decorativas para tus proyectos.",
+  },
+  {
+    id: 8,
+    name: "Goma Macaron",
+    category: "Gomas",
+    price: 900,
+    emoji: "🧁",
+    desc: "Goma con forma de pastelito.",
+  },
+  {
+    id: 9,
+    name: "Goma Patita",
+    category: "Gomas",
+    price: 1400,
+    desc: "Goma retráctil con diseño de gato.",
+  },
+  {
+    id: 10,
+    name: "Sacapuntas Osito",
+    category: "Sacapuntas",
+    price: 1200,
+    emoji: "🧸",
+    desc: "Sacapuntas con depósito.",
+  },
+  {
+    id: 11,
+    name: "Lápiz Gel Pastel",
+    category: "Lápices",
+    price: 2500,
+    emoji: "✏️",
+    desc: "Set de lápices en tonos pastel.",
+  },
+  {
+    id: 12,
+    name: "Lonchera Kawaii",
+    category: "Loncheras",
+    price: 8900,
+    emoji: "🍱",
+    desc: "Lonchera térmica con diseño kawaii.",
+  },
 ];
 
-const categories = ["Todos", ...new Set(products.map(p => p.category))];
+const categories = ["Todos", ...new Set(products.map((p) => p.category))];
 let currentCategory = "Todos";
 let search = "";
 let cart = [];
 
-const $ = id => document.getElementById(id);
-const money = value => "$" + value.toLocaleString("es-CL");
+const $ = (id) => document.getElementById(id);
+const money = (value) => "$" + value.toLocaleString("es-CL");
 
 function renderCategories() {
-  $("categories").innerHTML = categories.map(category => `
+  $("categories").innerHTML = categories
+    .map(
+      (category) => `
     <button class="category ${category === currentCategory ? "active" : ""}"
       onclick="setCategory('${category}')">${category}</button>
-  `).join("");
+  `,
+    )
+    .join("");
 }
 
 function setCategory(category) {
@@ -35,16 +122,21 @@ function setCategory(category) {
 }
 
 function renderProducts() {
-  const filtered = products.filter(product => {
-    const categoryOK = currentCategory === "Todos" || product.category === currentCategory;
-    const text = `${product.name} ${product.category} ${product.desc}`.toLowerCase();
+  const filtered = products.filter((product) => {
+    const categoryOK =
+      currentCategory === "Todos" || product.category === currentCategory;
+    const text =
+      `${product.name} ${product.category} ${product.desc}`.toLowerCase();
     return categoryOK && text.includes(search.toLowerCase());
   });
 
-  $("productCount").textContent = `${filtered.length} producto${filtered.length !== 1 ? "s" : ""}`;
+  $("productCount").textContent =
+    `${filtered.length} producto${filtered.length !== 1 ? "s" : ""}`;
   $("empty").classList.toggle("show", filtered.length === 0);
 
-  $("products").innerHTML = filtered.map(product => `
+  $("products").innerHTML = filtered
+    .map(
+      (product) => `
     <article class="card">
       <div class="product-image">${product.emoji}</div>
       <h3>${product.name}</h3>
@@ -54,26 +146,28 @@ function renderProducts() {
         <button class="add" onclick="addToCart(${product.id})" aria-label="Agregar ${product.name}">+</button>
       </div>
     </article>
-  `).join("");
+  `,
+    )
+    .join("");
 }
 
 function addToCart(id) {
-  const product = products.find(p => p.id === id);
-  const item = cart.find(p => p.id === id);
+  const product = products.find((p) => p.id === id);
+  const item = cart.find((p) => p.id === id);
 
   if (item) item.qty++;
-  else cart.push({...product, qty: 1});
+  else cart.push({ ...product, qty: 1 });
 
   renderCart();
   openCart();
 }
 
 function changeQty(id, amount) {
-  const item = cart.find(p => p.id === id);
+  const item = cart.find((p) => p.id === id);
   if (!item) return;
 
   item.qty += amount;
-  if (item.qty <= 0) cart = cart.filter(p => p.id !== id);
+  if (item.qty <= 0) cart = cart.filter((p) => p.id !== id);
   renderCart();
 }
 
@@ -85,7 +179,9 @@ function renderCart() {
   $("cartTotal").textContent = money(total);
 
   $("cartItems").innerHTML = cart.length
-    ? cart.map(item => `
+    ? cart
+        .map(
+          (item) => `
       <div class="cart-item">
         <div class="cart-emoji">${item.emoji}</div>
         <div class="cart-item-info">
@@ -98,7 +194,9 @@ function renderCart() {
           <button onclick="changeQty(${item.id}, 1)">+</button>
         </div>
       </div>
-    `).join("")
+    `,
+        )
+        .join("")
     : "<p style='text-align:center;color:#999;padding:40px 10px'>Tu carrito está vacío 🐾</p>";
 }
 
@@ -112,7 +210,7 @@ function closeCart() {
   $("overlay").classList.remove("show");
 }
 
-$("search").addEventListener("input", e => {
+$("search").addEventListener("input", (e) => {
   search = e.target.value;
   renderProducts();
 });
@@ -135,14 +233,17 @@ $("whatsapp").addEventListener("click", () => {
   const phone = "56912345678"; // CAMBIA ESTE NÚMERO
   let message = "Hola Boofi 💗 Quiero realizar este pedido:\n\n";
 
-  cart.forEach(item => {
+  cart.forEach((item) => {
     message += `• ${item.name} x${item.qty} - ${money(item.price * item.qty)}\n`;
   });
 
   const total = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
   message += `\nTotal: ${money(total)}\n\n¡Gracias! ✨`;
 
-  window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, "_blank");
+  window.open(
+    `https://wa.me/${phone}?text=${encodeURIComponent(message)}`,
+    "_blank",
+  );
 });
 
 renderCategories();
