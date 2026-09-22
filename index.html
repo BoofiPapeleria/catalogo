@@ -1,41 +1,258 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Boofi Papelería Kawaii - Catálogo digital">
-  <title>Boofi | Papelería Kawaii</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css"> <!-- tu hoja de estilos -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boofi Papelería Kawaii - Catálogo Digital</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font: Inter & Quicksand -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        kawaiiPink: '#ffb5e8',
+                        kawaiiPinkLight: '#ffe1f5',
+                        kawaiiYellow: '#fff9b1',
+                        kawaiiYellowLight: '#fffde6',
+                        kawaiiPurple: '#c2b280',
+                        kawaiiMint: '#b5fffc',
+                        kawaiiBg: '#fffafc',
+                    },
+                    fontFamily: {
+                        sans: ['Quicksand', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #fff9fc;
+            font-family: 'Quicksand', sans-serif;
+        }
+        .kawaii-shadow {
+            box-shadow: 0 10px 25px -5px rgba(255, 181, 232, 0.4), 0 8px 10px -6px rgba(255, 181, 232, 0.2);
+        }
+        .kawaii-border {
+            border: 3px dashed #ffb5e8;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #ffe1f5;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #ffb5e8;
+            border-radius: 4px;
+        }
+    </style>
 </head>
-<body>
-  <header>
-    <h1>Boofi Papelería Kawaii</h1>
-    <input id="search" type="text" placeholder="Buscar productos...">
-    <div id="categories"></div>
-  </header>
+<body class="bg-kawaiiBg text-gray-700 antialiased min-h-screen flex flex-col justify-between">
 
-  <main>
-    <p id="productCount"></p>
-    <div id="empty" class="hidden">No hay productos disponibles 😢</div>
-    <section id="products" class="grid"></section>
-  </main>
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b-2 border-kawaiiPinkLight shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-12 h-12 rounded-full bg-kawaiiPink flex items-center justify-center text-white text-2xl shadow-md">
+                    <i class="fa-solid fa-cat animate-bounce"></i>
+                </div>
+                <div>
+                    <h1 class="text-2xl font-bold text-pink-600 tracking-wide">Boofi</h1>
+                    <p class="text-xs text-pink-400 font-semibold uppercase tracking-wider">Papelería Kawaii</p>
+                </div>
+            </div>
 
-  <aside id="cart">
-    <button id="closeCart">Cerrar ✖</button>
-    <h2>Carrito</h2>
-    <div id="cartItems"></div>
-    <p>Total: <span id="cartTotal">$0</span></p>
-    <button id="clearCart">Vaciar carrito</button>
-    <button id="whatsapp">Enviar pedido por WhatsApp</button>
-  </aside>
+            <!-- Search bar desktop -->
+            <div class="hidden md:flex flex-1 max-w-md mx-8">
+                <div class="relative w-full">
+                    <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-pink-400">
+                        <i class="fa-solid fa-search"></i>
+                    </span>
+                    <input type="text" id="searchInput" placeholder="Busca stickers, lápices, gomas..." 
+                        class="w-full pl-10 pr-4 py-2 bg-kawaiiYellowLight border-2 border-kawaiiPink/50 rounded-full focus:outline-none focus:border-pink-500 text-sm transition-all shadow-inner">
+                </div>
+            </div>
 
-  <button id="openCart">🛒 <span id="cartCount">0</span></button>
-  <div id="overlay"></div>
+            <div class="flex items-center space-x-4">
+                    <button onclick="toggleCart()" class="relative bg-gradient-to-r from-pink-400 to-pink-500 text-white px-5 py-2.5 rounded-full font-bold shadow-md hover:from-pink-500 hover:to-pink-600 transition flex items-center space-x-2">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="hidden sm:inline">Carrito</span>
+                    <span id="cartBadge" class="absolute -top-2 -right-2 bg-yellow-300 text-amber-900 text-xs font-black w-6 h-6 rounded-full flex items-center justify-center border-2 border-white shadow">0</span>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile search bar -->
+        <div class="md:hidden px-4 pb-3">
+            <div class="relative w-full">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-pink-400">
+                    <i class="fa-solid fa-search"></i>
+                </span>
+                <input type="text" id="searchInputMobile" placeholder="Busca stickers, lápices..." 
+                    class="w-full pl-10 pr-4 py-2 bg-kawaiiYellowLight border-2 border-kawaiiPink/50 rounded-full focus:outline-none focus:border-pink-500 text-sm shadow-inner">
+            </div>
+        </div>
+    </header>
 
-  <!-- 🚀 Aquí se conecta tu script -->
-  <script src="script.js"></script>
-</body>
-</html>
+    <main class="flex-grow">
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div class="bg-gradient-to-r from-pink-100 via-yellow-50 to-pink-100 rounded-3xl p-6 md:p-10 border-4 border-white kawaii-shadow relative overflow-hidden flex flex-col md:flex-row items-center justify-between">
+                <div class="absolute -right-10 -bottom-10 opacity-20 text-9xl text-pink-400 pointer-events-none">
+                    <i class="fa-solid fa-paw"></i>
+                </div>
+                <div class="max-w-xl z-10 text-center md:text-left mb-6 md:mb-0">
+                    <span class="bg-pink-200 text-pink-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider inline-block mb-3">✨Boofi Papelería  ✨</span>
+                    <h2 class="text-3xl md:text-5xl font-extrabold text-gray-800 mb-3">¡Dale vida a tus apuntes con Boofi!</h2>
+                    <p class="text-gray-600 text-sm md:text-base mb-6">Explora nuestro catálogo digital con los productos más tiernos y coloridos: stickers, notes, lápices y mucho más. Pide directo por WhatsApp.</p>
+                    <div class="flex flex-wrap justify-center md:justify-start gap-3">
+                        <a href="#catalogo" class="bg-pink-500 hover:bg-pink-600 text-white font-bold px-6 py-3 rounded-full shadow transition transform hover:-translate-y-0.5">Ver Productos</a>                    </div>
+                </div>
+                <div class="z-10 flex justify-center">
+                    <div class="w-48 h-48 md:w-64 md:h-64 bg-white/80 rounded-full flex items-center justify-center p-4 kawaii-shadow border-4 border-pink-200 animate-pulse">
+                        <div class="text-center">
+                            <i class="fa-solid fa-gift text-6xl md:text-7xl text-pink-400 mb-2"></i>
+                            <p class="font-bold text-pink-600 text-sm">Envíos en Santiago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex items-center justify-between mb-4">
+                <h3 class="text-xl font-bold text-gray-800 flex items-center gap-2">
+                    <i class="fa-solid fa-list text-pink-500"></i> Categorías
+                </h3>
+                <span id="productCount" class="text-xs font-semibold text-gray-500">Mostrando todos los productos</span>
+            </div>
+            <div id="categoryContainer" class="flex items-center space-x-3 overflow-x-auto pb-4 pt-1 no-scrollbar">
+                <!-- Dynamically populated categories -->
+            </div>
+        </section>
+
+        <section id="catalogo" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Dynamically populated products -->
+            </div>
+            <!-- Empty state -->
+            <div id="emptyState" class="hidden text-center py-16">
+                <div class="text-6xl text-pink-300 mb-4"><i class="fa-solid fa-face-sad-tear"></i></div>
+                <h4 class="text-xl font-bold text-gray-700 mb-2">No encontramos productos</h4>
+                <p class="text-gray-500 text-sm">Prueba buscando con otro término o seleccionando otra categoría.</p>
+            </div>
+        </section>
+    </main>
+
+    <div id="cartDrawer" class="fixed inset-0 z-50 overflow-hidden hidden">
+        <div class="absolute inset-0 bg-black/40 backdrop-blur-sm transition-opacity" onclick="toggleCart()"></div>
+        <div class="absolute inset-y-0 right-0 max-w-full flex pl-10">
+            <div class="w-screen max-w-md bg-white shadow-2xl flex flex-col justify-between">
+                <!-- Drawer Header -->
+                <div class="p-6 bg-kawaiiPinkLight border-b border-pink-200 flex items-center justify-between">
+                    <div class="flex items-center space-x-2">
+                        <i class="fa-solid fa-bag-shopping text-pink-600 text-xl"></i>
+                        <h3 class="text-lg font-bold text-gray-800">Tu Carrito Kawaii</h3>
+                    </div>
+                    <button onclick="toggleCart()" class="text-gray-500 hover:text-gray-700 text-xl font-bold w-8 h-8 rounded-full bg-white flex items-center justify-center shadow">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+
+                <!-- Drawer Items -->
+                <div id="cartItemsContainer" class="flex-1 overflow-y-auto p-6 space-y-4 divide-y divide-gray-100">
+                    <!-- Cart items inserted dynamically -->
+                </div>
+
+                <!-- Drawer Footer -->
+                <div class="p-6 bg-gray-50 border-t border-gray-100">
+                    <div class="space-y-2 mb-4">
+                        <div class="flex justify-between text-sm text-gray-600">
+                            <span>Subtotal</span>
+                            <span id="cartSubtotal">$0</span>
+                        </div>
+                        <div class="flex justify-between text-base font-bold text-gray-800 border-t pt-2">
+                            <span>Total</span>
+                            <span id="cartTotal" class="text-pink-600">$0</span>
+                        </div>
+                    </div>
+                    <button onclick="checkoutWhatsApp()" class="w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold py-3.5 px-4 rounded-2xl shadow-lg flex items-center justify-center space-x-3 transition transform hover:-translate-y-0.5">
+                        <i class="fa-brands fa-whatsapp text-2xl"></i>
+                        <span>Comprar por WhatsApp</span>
+                    </button>
+                    <button onclick="clearCart()" class="w-full mt-2 text-xs text-gray-400 hover:text-red-500 font-semibold py-1">
+                        Vaciar carrito
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="githubModal" class="fixed inset-0 z-50 overflow-y-auto hidden flex items-center justify-center p-4">
+        <div class="fixed inset-0 bg-black/40 backdrop-blur-sm transition-opacity" onclick="toggleGitHubModal()"></div>
+        <div class="relative bg-white rounded-3xl max-w-2xl w-full p-6 md:p-8 z-10 kawaii-shadow border-4 border-kawaiiYellow">
+            <div class="flex items-center justify-between mb-4 border-b pb-3">
+                <h3 class="text-xl font-bold text-gray-800 flex items-center gap-2">
+                    <i class="fa-brands fa-github text-amber-800 text-2xl"></i> Instrucciones para GitHub Pages
+                </h3>
+                <button onclick="toggleGitHubModal()" class="text-gray-400 hover:text-gray-600 text-xl font-bold">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="space-y-4 text-sm text-gray-600 max-h-[70vh] overflow-y-auto pr-2">
+                <p>¡Sube tu catálogo digital gratis en menos de 5 minutos utilizando <strong>GitHub Pages</strong>! Sigue estos sencillos pasos:</p>
+                
+                <div class="bg-kawaiiYellowLight p-4 rounded-2xl border border-yellow-200">
+                    <h4 class="font-bold text-amber-900 mb-1">Paso 1: Crear un Repositorio</h4>
+                    <p class="text-xs text-amber-800">Entra a <a href="https://github.com" target="_blank" class="underline font-semibold">GitHub</a>, inicia sesión y crea un nuevo repositorio público (por ejemplo: <code>boofi-papeleria</code>).</p>
+                </div>
+
+                <div class="bg-pink-50 p-4 rounded-2xl border border-pink-100">
+                    <h4 class="font-bold text-pink-700 mb-1">Paso 2: Subir este archivo</h4>
+                    <p class="text-xs text-pink-600">Guarda todo el código de esta página como un archivo llamado <code>index.html</code>. Súbelo al repositorio haciendo clic en <strong>"Add file" -> "Upload files"</strong> y arrastra el archivo. Luego haz clic en <strong>"Commit changes"</strong>.</p>
+                </div>
+
+                <div class="bg-kawaiiYellowLight p-4 rounded-2xl border border-yellow-200">
+                    <h4 class="font-bold text-amber-900 mb-1">Paso 3: Activar GitHub Pages</h4>
+                    <ol class="list-decimal list-inside text-xs text-amber-800 space-y-1 mt-1">
+                        <li>En tu repositorio, ve a la pestaña <strong>Settings</strong> (Configuración).</li>
+                        <li>En el menú de la izquierda, busca la sección <strong>Pages</strong>.</li>
+                        <li>En <strong>Build and deployment</strong> -> <strong>Branch</strong>, selecciona la rama <code>main</code> (o <code>master</code>) y la carpeta <code>/ (root)</code>.</li>
+                        <li>Haz clic en <strong>Save</strong>.</li>
+                    </ol>
+                </div>
+
+                <div class="bg-emerald-50 p-4 rounded-2xl border border-emerald-100">
+                    <h4 class="font-bold text-emerald-700 mb-1">Paso 4: ¡Listo! Tu web en línea</h4>
+                    <p class="text-xs text-emerald-600">Espera 1 o 2 minutos y recarga la página de configuración en GitHub Pages. Te aparecerá la URL pública de tu catálogo lista para compartir en Instagram y WhatsApp.</p>
+                </div>
+            </div>
+            <div class="mt-6 text-right">
+                <button onclick="toggleGitHubModal()" class="bg-pink-500 hover:bg-pink-600 text-white font-bold px-6 py-2 rounded-full text-sm shadow">¡Entendido!</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-white border-t border-pink-100 mt-12 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+            <div class="flex items-center space-x-2">
+                <div class="w-8 h-8 rounded-full bg-pink-400 flex items-center justify-center text-white text-sm">
+                    <i class="fa-solid fa-cat"></i>
+                </div>
+                <span class="font-bold text-gray-800">Boofi Papelería Kawaii</span>
+            </div>
+            <p class="text-xs text-gray-500">© 2026 Boofi Papelería. Todos los derechos reservados. Hecho con amor 💖</p>
+            <div class="flex space-x-4 text-pink-500 text-lg">
+                <a href="#" class="hover:text-pink-600"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="hover:text-pink-600"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#" onclick="checkoutWhatsApp()" class="hover:text-green-600"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
