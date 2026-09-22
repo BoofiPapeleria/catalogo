@@ -1,92 +1,151 @@
 const products = [
-    { id: 1, name: "Pegamento Líquido", category: "Pegamentos", price: 1500, images:, desc: "Pegamento líquido de 150 ml, su fórmula garantiza una adherencia fuerte y duradera en papel, cartón y otros materiales ligeros" },
-    { id: 2, name: "Pegamento Líquido con Glitter", category: "Pegamentos", price: 1500, stock: 8, emoji: "✨", desc: "Pegamento brillante para manualidades y bullet journal." },
-    { id: 3, name: "Pegamento en Cinta Patita de Gato", category: "Pegamentos", price: 1800, stock: 12, emoji: "🐾", desc: "Cinta adhesiva en rollo en forma de adorable patita." },
-    { id: 4, name: "Stickers Holográficos Sanrio x50", category: "Stickers", price: 2500, stock: 20, emoji: "🌸", desc: "Set de 50 stickers estéticos holográficos resistentes al agua." },
-    { id: 5, name: "Pack Stickers Pastel Animals", category: "Stickers", price: 2000, stock: 14, emoji: "🐰", desc: "Adhesivos troquelados de animalitos pasteles para decorar." },
-    { id: 6, name: "Stickers Vintage Journaling", category: "Stickers", price: 2200, stock: 9, emoji: "📜", desc: "Stickers estéticos tipo papel kraft para notas y libretas." },
-    { id: 7, name: "Notas Adhesivas Post-it Patitas", category: "Post-it", price: 1000, stock: 25, emoji: "🐾", desc: "Bloc de notas adhesivas con forma de patitas de gatito." },
-    { id: 8, name: "Post-it Index Marcadores de Página", category: "Post-it", price: 1300, stock: 18, emoji: "🔖", desc: "Banderitas adhesivas plásticas de colores pasteles." },
-    { id: 9, name: "Mini Block Notas Sanrio", category: "Post-it", price: 1600, stock: 11, emoji: "🎀", desc: "Notas adhesivas con tiernos personajes kawaii." },
-    { id: 10, name: "Washi Tape Set Van Gogh Art", category: "Van Gogh", price: 3500, stock: 6, emoji: "🎨", desc: "Set de cintas washi tape inspiradas en obras de Van Gogh." },
-    { id: 11, name: "Block de Notas Arte Clásico", category: "Van Gogh", price: 2800, stock: 10, emoji: "🖼️", desc: "Libreta de notas con portadas de pintura clásica." },
-    { id: 12, name: "Goma de Borrar Macarrón / Postre", category: "Gomas", price: 900, stock: 30, emoji: "🧁", desc: "Goma perfumada con forma de deliciosos pastelitos kawaii." },
-    { id: 13, name: "Goma Retráctil Patita de Gato", category: "Gomas", price: 1400, stock: 17, emoji: "🐱", desc: "Goma de borrar en barra con diseño deslizante de patita." },
-    { id: 14, name: "Borrador en Forma de Té boba", category: "Gomas", price: 1100, stock: 22, emoji: "🧋", desc: "Tierno borrador con diseño de vaso de bubble tea." },
-    { id: 15, name: "Sacapuntas con Depósito Osito", category: "Sacapuntas", price: 1200, stock: 15, emoji: "🧸", desc: "Sacapuntas de doble hoja con depósito para viruta." },
-    { id: 16, name: "Sacapuntas Kawaii Estrella", category: "Sacapuntas", price: 1000, stock: 19, emoji: "⭐", desc: "Sacapuntas ergonómico con carita feliz." },
-    { id: 17, name: "Tijera Escolar Segura con Funda", category: "Corte", price: 1800, stock: 13, emoji: "✂️", desc: "Tijeras con punta roma y funda protectora de patita." },
-    { id: 18, name: "Cutter en Forma de Nube", category: "Corte", price: 1500, stock: 10, emoji: "☁️", desc: "Mini cutter retráctil ideal para abrir sobres y manualidades." },
-    { id: 19, name: "Lápiz Gel 10 Colores Retráctil", category: "Lápices", price: 2500, stock: 20, emoji: "✏️", desc: "Lápiz multi-color con tintas pasteles y diseño kawaii." },
-    { id: 20, name: "Portaminas 0.5mm Conejito", category: "Lápices", price: 1600, stock: 16, emoji: "🐰", desc: "Portaminas con topper de conejito de goma desmontable." },
-    { id: 21, name: "Set Lápices Pastel Highlighter", category: "Lápices", price: 3800, stock: 12, emoji: "🖍️", desc: "Set de 6 destacados con tonos pasteles suaves." },
-    { id: 22, name: "Lonchera Térmica Kawaii Bear", category: "Loncheras", price: 8900, stock: 5, emoji: "🍱", desc: "Bolso térmico impermeable con diseño de osito tierno." },
-    { id: 23, name: "Bolsa Porta Alimentos Sanrio", category: "Loncheras", price: 9500, stock: 4, emoji: "🥪", desc: "Lonchera espaciosa con forro térmico interior." },
-    { id: 24, name: "Regla Flexible de Silicona Animalitos", category: "Reglas", price: 1000, stock: 25, emoji: "📏", desc: "Regla de 20cm flexible y anti-rotura con figuras." },
-    { id: 25, name: "Set Reglas Kawaii Geometría Pastel", category: "Reglas", price: 2200, stock: 14, emoji: "📐", desc: "Set de regla, escuadra y transportador en tonos pasteles." }
+  { id: 1, name: "Pegamento Líquido", category: "Pegamentos", price: 1500, images:, desc: "Pegamento líquido de 150 ml, su fórmula garantiza una adherencia fuerte y duradera en papel, cartón y otros materiales ligeros" },
+  {id:2, name:"Pegamento Glitter", category:"Pegamentos", price:1500, emoji:"✨", desc:"Ideal para manualidades y bullet journal."},
+  {id:3, name:"Stickers Holográficos", category:"Stickers", price:2500, emoji:"🌸", desc:"Set de stickers holográficos."},
+  {id:4, name:"Stickers Animalitos", category:"Stickers", price:2000, emoji:"🐰", desc:"Animalitos en colores pastel."},
+  {id:5, name:"Post-it Patitas", category:"Post-it", price:1000, emoji:"🐾", desc:"Notas adhesivas con forma de patitas."},
+  {id:6, name:"Mini Block Kawaii", category:"Post-it", price:1600, emoji:"🎀", desc:"Mini notas con diseños adorables."},
+  {id:7, name:"Washi Tape Arte", category:"Washi Tape", price:3500, emoji:"🎨", desc:"Cintas decorativas para tus proyectos."},
+  {id:8, name:"Goma Macaron", category:"Gomas", price:900, emoji:"🧁", desc:"Goma con forma de pastelito."},
+  {id:9, name:"Goma Patita", category:"Gomas", price:1400, emoji:"🐱", desc:"Goma retráctil con diseño de gato."},
+  {id:10, name:"Sacapuntas Osito", category:"Sacapuntas", price:1200, emoji:"🧸", desc:"Sacapuntas con depósito."},
+  {id:11, name:"Lápiz Gel Pastel", category:"Lápices", price:2500, emoji:"✏️", desc:"Set de lápices en tonos pastel."},
+  {id:12, name:"Lonchera Kawaii", category:"Loncheras", price:8900, emoji:"🍱", desc:"Lonchera térmica con diseño kawaii."}
 ];
 
-const categories = ["Todos", "Pegamentos", "Stickers", "Post-it", "Van Gogh", "Gomas", "Sacapuntas", "Corte", "Lápices", "Loncheras", "Reglas"];
+const categories = ["Todos", ...new Set(products.map(p => p.category))];
 let currentCategory = "Todos";
-let searchQuery = "";
+let search = "";
 let cart = [];
 
-const categoryContainer = document.getElementById('categoryContainer');
-const productGrid = document.getElementById('productGrid');
-const emptyState = document.getElementById('emptyState');
-const cartDrawer = document.getElementById('cartDrawer');
-const cartItemsContainer = document.getElementById('cartItemsContainer');
-const cartBadge = document.getElementById('cartBadge');
-const cartSubtotal = document.getElementById('cartSubtotal');
-const cartTotal = document.getElementById('cartTotal');
-const searchInput = document.getElementById('searchInput');
-const searchInputMobile = document.getElementById('searchInputMobile');
-const productCount = document.getElementById('productCount');
-const githubModal = document.getElementById('githubModal');
+const $ = id => document.getElementById(id);
+const money = value => "$" + value.toLocaleString("es-CL");
 
 function renderCategories() {
-    if (!categoryContainer) return;
-    categoryContainer.innerHTML = '';
-    categories.forEach(cat => {
-        const isSelected = cat === currentCategory;
-        const btn = document.createElement('button');
-        btn.className = `whitespace-nowrap px-4 py-2 rounded-full text-sm font-bold transition shadow-sm flex items-center space-x-1.5 ${
-            isSelected 
-                ? 'bg-pink-500 text-white shadow-pink-200' 
-                : 'bg-white text-gray-600 hover:bg-pink-50 border border-pink-100'
-        }`;
-        btn.innerHTML = `${cat}`;
-        btn.onclick = () => {
-            currentCategory = cat;
-            renderCategories();
-            renderProducts();
-        };
-        categoryContainer.appendChild(btn);
-    });
+  $("categories").innerHTML = categories.map(category => `
+    <button class="category ${category === currentCategory ? "active" : ""}"
+      onclick="setCategory('${category}')">${category}</button>
+  `).join("");
+}
+
+function setCategory(category) {
+  currentCategory = category;
+  renderCategories();
+  renderProducts();
 }
 
 function renderProducts() {
-    if (!productGrid) return;
-    const filtered = products.filter(p => {
-        const matchesCat = currentCategory === "Todos" || p.category === currentCategory;
-        const matchesSearch = p.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
-                              p.desc.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                              p.category.toLowerCase().includes(searchQuery.toLowerCase());
-        return matchesCat && matchesSearch;
-    });
+  const filtered = products.filter(product => {
+    const categoryOK = currentCategory === "Todos" || product.category === currentCategory;
+    const text = `${product.name} ${product.category} ${product.desc}`.toLowerCase();
+    return categoryOK && text.includes(search.toLowerCase());
+  });
 
-    if (productCount) productCount.textContent = `Mostrando ${filtered.length} productos`;
-    productGrid.innerHTML = '';
+  $("productCount").textContent = `${filtered.length} producto${filtered.length !== 1 ? "s" : ""}`;
+  $("empty").classList.toggle("show", filtered.length === 0);
 
-    if (filtered.length === 0) {
-        if (emptyState) emptyState.classList.remove('hidden');
-        return;
-    } else {
-        if (emptyState) emptyState.classList.add('hidden');
-    }
+  $("products").innerHTML = filtered.map(product => `
+    <article class="card">
+      <div class="product-image">${product.emoji}</div>
+      <h3>${product.name}</h3>
+      <p>${product.desc}</p>
+      <div class="card-bottom">
+        <span class="price">${money(product.price)}</span>
+        <button class="add" onclick="addToCart(${product.id})" aria-label="Agregar ${product.name}">+</button>
+      </div>
+    </article>
+  `).join("");
+}
 
-    filtered.forEach(product => {
-        const card = document.createElement('div');
-        card.className = `bg-white rounded-3xl p-4 kawaii-shadow border-2 border-pink-100 flex flex-col justify-between transition transform hover:-translate-y-1 relative group`;
-        
-        card.innerHTML = `
+function addToCart(id) {
+  const product = products.find(p => p.id === id);
+  const item = cart.find(p => p.id === id);
+
+  if (item) item.qty++;
+  else cart.push({...product, qty: 1});
+
+  renderCart();
+  openCart();
+}
+
+function changeQty(id, amount) {
+  const item = cart.find(p => p.id === id);
+  if (!item) return;
+
+  item.qty += amount;
+  if (item.qty <= 0) cart = cart.filter(p => p.id !== id);
+  renderCart();
+}
+
+function renderCart() {
+  const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
+  const total = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+
+  $("cartCount").textContent = totalItems;
+  $("cartTotal").textContent = money(total);
+
+  $("cartItems").innerHTML = cart.length
+    ? cart.map(item => `
+      <div class="cart-item">
+        <div class="cart-emoji">${item.emoji}</div>
+        <div class="cart-item-info">
+          <strong>${item.name}</strong>
+          <small>${money(item.price)} c/u</small>
+        </div>
+        <div class="qty">
+          <button onclick="changeQty(${item.id}, -1)">−</button>
+          <span>${item.qty}</span>
+          <button onclick="changeQty(${item.id}, 1)">+</button>
+        </div>
+      </div>
+    `).join("")
+    : "<p style='text-align:center;color:#999;padding:40px 10px'>Tu carrito está vacío 🐾</p>";
+}
+
+function openCart() {
+  $("cart").classList.add("open");
+  $("overlay").classList.add("show");
+}
+
+function closeCart() {
+  $("cart").classList.remove("open");
+  $("overlay").classList.remove("show");
+}
+
+$("search").addEventListener("input", e => {
+  search = e.target.value;
+  renderProducts();
+});
+
+$("openCart").addEventListener("click", openCart);
+$("closeCart").addEventListener("click", closeCart);
+$("overlay").addEventListener("click", closeCart);
+
+$("clearCart").addEventListener("click", () => {
+  cart = [];
+  renderCart();
+});
+
+$("whatsapp").addEventListener("click", () => {
+  if (!cart.length) {
+    alert("Agrega productos al carrito primero 💗");
+    return;
+  }
+
+  const phone = "56912345678"; // CAMBIA ESTE NÚMERO
+  let message = "Hola Boofi 💗 Quiero realizar este pedido:\n\n";
+
+  cart.forEach(item => {
+    message += `• ${item.name} x${item.qty} - ${money(item.price * item.qty)}\n`;
+  });
+
+  const total = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+  message += `\nTotal: ${money(total)}\n\n¡Gracias! ✨`;
+
+  window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, "_blank");
+});
+
+renderCategories();
+renderProducts();
+renderCart();
+
