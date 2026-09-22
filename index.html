@@ -1,81 +1,89 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Boofi Papelería Kawaii - Catálogo digital">
-  <title>Boofi | Papelería Kawaii</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Boofi Papelería Kawaii - Catálogo digital"
+    />
+    <title>Boofi | Papelería Kawaii</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header-inner">
+        <a class="logo" href="#">
+          <span class="logo-img"></span>
+          <span><strong>Boofi</strong><small>Papelería Kawaii</small></span>
+        </a>
 
-  <header class="header">
-    <div class="container header-inner">
-      <a class="logo" href="#">
-        <span class="logo-img"></span>
-        <span><strong>Boofi</strong><small>Papelería Kawaii</small></span>
-      </a>
-
-      <div class="search">
-        <input id="search" type="search" placeholder="Buscar productos...">
-      </div>
-
-      <button class="cart-button" id="openCart">
-        🛒 Carrito <b id="cartCount">0</b>
-      </button>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero container">
-      <div>
-        <span class="tag">✨ Papelería bonita para días bonitos ✨</span>
-        <h1>Haz que tus apuntes sean más <span>kawaii</span> 💗</h1>
-        <p>Descubre stickers, lápices, notas y accesorios para estudiar, crear y organizarte.</p>
-        <a class="button" href="#catalogo">Ver catálogo</a>
-      </div>
-      
-    </section>
-
-    <section class="container catalog" id="catalogo">
-      <div class="section-title">
-        <div>
-          <h2>Catálogo</h2>
-          <p id="productCount">Todos los productos</p>
+        <div class="search">
+          <input id="search" type="search" placeholder="Buscar productos..." />
         </div>
+
+        <button class="cart-button" id="openCart">
+          🛒 Carrito <b id="cartCount">0</b>
+        </button>
       </div>
+    </header>
 
-      <nav class="categories" id="categories"></nav>
-      <div class="products" id="products"></div>
-      <div class="empty" id="empty">No encontramos productos 💭</div>
-    </section>
-  </main>
+    <main>
+      <section class="hero container">
+        <div>
+          <span class="tag">✨ Papelería bonita para días bonitos ✨</span>
+          <h1>Haz que tus apuntes sean más <span>kawaii</span> 💗</h1>
+          <p>
+            Descubre stickers, lápices, notas y accesorios para estudiar, crear
+            y organizarte.
+          </p>
+          <a class="button" href="#catalogo">Ver catálogo</a>
+        </div>
+        <div class="hero-art">🎀<br /><span>Boofi</span></div>
+      </section>
 
-  <aside class="cart" id="cart">
-    <div class="cart-head">
-      <h2>🛍️ Mi carrito</h2>
-      <button id="closeCart">✕</button>
-    </div>
-    <div class="cart-items" id="cartItems"></div>
-    <div class="cart-footer">
-      <strong>Total <span id="cartTotal">$0</span></strong>
-      <button class="whatsapp" id="whatsapp">💬 Pedir por WhatsApp</button>
-      <button class="clear" id="clearCart">Vaciar carrito</button>
-    </div>
-  </aside>
+      <section class="container catalog" id="catalogo">
+        <div class="section-title">
+          <div>
+            <h2>Catálogo</h2>
+            <p id="productCount">Todos los productos</p>
+          </div>
+        </div>
 
-  <div class="overlay" id="overlay"></div>
+        <nav class="categories" id="categories"></nav>
+        <div class="products" id="products"></div>
+        <div class="empty" id="empty">No encontramos productos 💭</div>
+      </section>
+    </main>
 
-  <footer>
-    <div class="container">
-      <strong>🐱 Boofi Papelería Kawaii</strong>
-      <span>Hecho con 💗 para amantes de la papelería.</span>
-    </div>
-  </footer>
+    <aside class="cart" id="cart">
+      <div class="cart-head">
+        <h2>🛍️ Mi carrito</h2>
+        <button id="closeCart">✕</button>
+      </div>
+      <div class="cart-items" id="cartItems"></div>
+      <div class="cart-footer">
+        <strong>Total <span id="cartTotal">$0</span></strong>
+        <button class="whatsapp" id="whatsapp">💬 Pedir por WhatsApp</button>
+        <button class="clear" id="clearCart">Vaciar carrito</button>
+      </div>
+    </aside>
 
-  <script src="script.js"></script>
-</body>
+    <div class="overlay" id="overlay"></div>
+
+    <footer>
+      <div class="container">
+        <strong>🐱 Boofi Papelería Kawaii</strong>
+        <span>Hecho con 💗 para amantes de la papelería.</span>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>
