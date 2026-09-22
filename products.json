@@ -7,7 +7,6 @@
     "emoji": "",
     "images": [
       "images/pegamento-liquido.png"
-      
     ],
     "desc": "Pegamento líquido de 150 ml, su fórmula garantiza una adherencia fuerte y duradera en papel, cartón y otros materiales ligeros."
   },
@@ -18,8 +17,7 @@
     "price": 2500,
     "emoji": "",
     "images": [
-      "images/pegamento-magico.png",
-      
+      "images/pegamento-magico.png"
     ],
     "desc": "Masilla versátil que permite fijar objetos ligeros en superficies lisas sin dejar residuos. Se puede moldear, reutilizar y retirar fácilmente, perfecta para decorar tus espacios."
   },
@@ -67,8 +65,9 @@
     "images": [
       "images/stickers8.png",
       "images/stickers9.png"
-     ],
-Set de 3 láminas de stickers transparentes con diseños kawaii para darle un toque único a tus cuadernos, agendas o cartas.
+    ],
+    "desc": "Set de 3 láminas de stickers transparentes con diseños kawaii para darle un toque único a tus cuadernos, agendas o cartas."
+  },
   {
     "id": 7,
     "name": "Stickers Kawaii",
@@ -76,7 +75,7 @@ Set de 3 láminas de stickers transparentes con diseños kawaii para darle un to
     "price": 800,
     "emoji": "",
     "images": [
-      "images/stickers4.png"
+      "images/stickers4.png",
       "images/stickers5.png",
       "images/stickers6.png",
       "images/stickers7.png"
