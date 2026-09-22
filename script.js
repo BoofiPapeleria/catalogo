@@ -4,25 +4,17 @@ let currentCategory = "Todos";
 let search = "";
 let cart = [];
 
-const $ = id => document.getElementById(id);
-const money = value => "$" + value.toLocaleString("es-CL");
-
 async function loadProducts() {
-  try {
-    const response = await fetch('./products.json');
-    products = await response.json();
-
-    // Generar categorías dinámicamente
-    categories = ["Todos", ...new Set(products.map(p => p.category))];
-
-    renderCategories();
-    renderProducts();
-    renderCart();
-  } catch (error) {
-    console.error("Error cargando productos:", error);
-    $("products").innerHTML = "<p style='color:red'>No se pudieron cargar los productos 😢</p>";
-  }
+  const response = await fetch('./products.json');
+  products = await response.json();
+  categories = ["Todos", ...new Set(products.map(p => p.category))];
+  renderCategories();
+  renderProducts();
+  renderCart();
 }
+
+loadProducts();
+
 
 function renderCategories() {
   $("categories").innerHTML = categories.map(category => `
