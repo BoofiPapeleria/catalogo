@@ -1,13 +1,28 @@
-// Importa productos desde el archivo JSON
-import products from './products.json' assert { type: 'json' };
-
-const categories = ["Todos", ...new Set(products.map(p => p.category))];
+let products = [];
+let categories = [];
 let currentCategory = "Todos";
 let search = "";
 let cart = [];
 
 const $ = id => document.getElementById(id);
 const money = value => "$" + value.toLocaleString("es-CL");
+
+async function loadProducts() {
+  try {
+    const response = await fetch('./products.json');
+    products = await response.json();
+
+    // Generar categorías dinámicamente
+    categories = ["Todos", ...new Set(products.map(p => p.category))];
+
+    renderCategories();
+    renderProducts();
+    renderCart();
+  } catch (error) {
+    console.error("Error cargando productos:", error);
+    $("products").innerHTML = "<p style='color:red'>No se pudieron cargar los productos 😢</p>";
+  }
+}
 
 function renderCategories() {
   $("categories").innerHTML = categories.map(category => `
@@ -99,45 +114,4 @@ function openCart() {
   $("overlay").classList.add("show");
 }
 
-function closeCart() {
-  $("cart").classList.remove("open");
-  $("overlay").classList.remove("show");
-}
-
-$("search").addEventListener("input", e => {
-  search = e.target.value;
-  renderProducts();
-});
-
-$("openCart").addEventListener("click", openCart);
-$("closeCart").addEventListener("click", closeCart);
-$("overlay").addEventListener("click", closeCart);
-
-$("clearCart").addEventListener("click", () => {
-  cart = [];
-  renderCart();
-});
-
-$("whatsapp").addEventListener("click", () => {
-  if (!cart.length) {
-    alert("Agrega productos al carrito primero 💗");
-    return;
-  }
-
-  const phone = "56912345678"; // CAMBIA ESTE NÚMERO POR EL TUYO
-  let message = "Hola Boofi 💗 Quiero realizar este pedido:\n\n";
-
-  cart.forEach(item => {
-    message += `• ${item.name} x${item.qty} - ${money(item.price * item.qty)}\n`;
-  });
-
-  const total = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
-  message += `\nTotal: ${money(total)}\n\n¡Gracias! ✨`;
-
-  window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, "_blank");
-});
-
-renderCategories();
-renderProducts();
-renderCart();
-
+function closeCart
