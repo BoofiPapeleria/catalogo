@@ -3,37 +3,108 @@
     "id": 1,
     "name": "Pegamento Líquido",
     "category": "Pegamentos",
-    "price": 1500,
+    "price": 1300,
     "emoji": "",
-    "image": "images/pegamento-osito.jpg",
-    "desc": "Pegamento líquido."
+    "images": [
+      "images/pegamento-liquido.png"
+      
+    ],
+    "desc": "Pegamento líquido de 150 ml, su fórmula garantiza una adherencia fuerte y duradera en papel, cartón y otros materiales ligeros."
   },
   {
     "id": 2,
-    "name": "Pegamento Glitter",
+    "name": "Pegamento Mágico",
     "category": "Pegamentos",
-    "price": 1500,
-    "emoji": "✨",
-    "image": "images/pegamento-glitter.jpg",
-    "desc": "Ideal para manualidades y bullet journal."
+    "price": 2500,
+    "emoji": "",
+    "images": [
+      "images/pegamento-magico.png",
+      
+    ],
+    "desc": "Masilla versátil que permite fijar objetos ligeros en superficies lisas sin dejar residuos. Se puede moldear, reutilizar y retirar fácilmente, perfecta para decorar tus espacios."
   },
   {
     "id": 3,
-    "name": "Stickers Holográficos",
-    "category": "Stickers",
-    "price": 2500,
-    "emoji": "🌸",
-    "image": "images/stickers-holograficos.jpg",
-    "desc": "Set de stickers holográficos."
+    "name": "Pegamento en Cinta 8M",
+    "category": "Pegamentos",
+    "price": 2000,
+    "emoji": "",
+    "images": [
+      "images/pegamento-cinta8m.png"
+    ],
+    "desc": "Cinta adhesiva de 8 metros x 8 mm, diseñada para pegar de manera rápida, limpia y sin manchas. Ideal para uso escolar, oficina o manualidades."
   },
   {
     "id": 4,
-    "name": "Stickers Animalitos",
+    "name": "Pegamento en Cinta 6M",
+    "category": "Pegamentos",
+    "price": 1800,
+    "emoji": "",
+    "images": [
+      "images/pegamento-cinta6m.png"
+    ],
+    "desc": "Cinta adhesiva de 6 metros x 8 mm, diseñada para pegar de manera rápida, limpia y sin manchas. Ideal para uso escolar, oficina o manualidades."
+  },
+  {
+    "id": 5,
+    "name": "Set de Stickers",
     "category": "Stickers",
-    "price": 2000,
-    "emoji": "🐰",
-    "image": "images/stickers-animalitos.jpg",
-    "desc": "Animalitos en colores pastel."
+    "price": 800,
+    "emoji": "",
+    "images": [
+      "images/stickers1.png",
+      "images/stickers2.png",
+      "images/stickers3.png"
+    ],
+    "desc": "Stickers transparentes con ilustraciones tiernas y coloridas, ideales para decorar cuadernos, agendas o cartas. Cada set incluye 3 láminas."
+  },
+  {
+    "id": 6,
+    "name": "Set de Stickers",
+    "category": "Stickers",
+    "price": 800,
+    "emoji": "",
+    "images": [
+      "images/stickers8.png",
+      "images/stickers9.png"
+     ],
+Set de 3 láminas de stickers transparentes con diseños kawaii para darle un toque único a tus cuadernos, agendas o cartas.
+  {
+    "id": 7,
+    "name": "Stickers Kawaii",
+    "category": "Stickers",
+    "price": 800,
+    "emoji": "",
+    "images": [
+      "images/stickers4.png"
+      "images/stickers5.png",
+      "images/stickers6.png",
+      "images/stickers7.png"
+    ],
+    "desc": "Lámina de stickers brillantes con diseños kawaii, perfectos para dar un toque especial y luminoso a tus proyectos."
+  },
+  {
+    "id": 8,
+    "name": "Stickers Sanrio",
+    "category": "Stickers",
+    "price": 1800,
+    "emoji": "",
+    "images": [
+      "images/stickers-sanrio1.png",
+      "images/stickers-sanrio2.png"
+    ],
+    "desc": "Colección de stickers transparentes de Sanrio, cada set incluye 20 láminas de 7,5 × 7,5 cm con diseños adorables de My Melody y Cinnamoroll."
+  },
+  {
+    "id": 9,
+    "name": "Stickers Sanrio",
+    "category": "Stickers",
+    "price": 1600,
+    "emoji": "",
+    "images": [
+      "images/stickers-sanrio3.png",
+      "images/stickers-sanrio4.png"
+    ],
+    "desc": "Colección de stickers transparentes de Sanrio, cada set incluye 25 láminas de 7,5 × 7,5 cm con diseños adorables de My Melody y Cinnamoroll."
   }
-  // ... y así con el resto
 ]
