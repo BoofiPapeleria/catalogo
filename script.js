@@ -1,23 +1,13 @@
-let products = [];
-let categories = [];
+// Importa productos desde el archivo JSON
+import products from './products.json' assert { type: 'json' };
+
+const categories = ["Todos", ...new Set(products.map(p => p.category))];
 let currentCategory = "Todos";
 let search = "";
 let cart = [];
 
 const $ = id => document.getElementById(id);
 const money = value => "$" + value.toLocaleString("es-CL");
-
-// 🔹 Cargar productos desde JSON
-fetch("products.json")
-  .then(res => res.json())
-  .then(data => {
-    products = data;
-    categories = ["Todos", ...new Set(products.map(p => p.category))];
-    renderCategories();
-    renderProducts();
-    renderCart();
-  })
-  .catch(err => console.error("Error al cargar productos:", err));
 
 function renderCategories() {
   $("categories").innerHTML = categories.map(category => `
@@ -45,8 +35,8 @@ function renderProducts() {
   $("products").innerHTML = filtered.map(product => `
     <article class="card">
       <div class="product-image">
-        ${product.image 
-          ? `<img src="${product.image}" alt="${product.name}" style="max-width:100%;max-height:100%;border-radius:15px;">` 
+        ${product.images && product.images.length > 0
+          ? product.images.map(img => `<img src="${img}" alt="${product.name}" style="max-width:100%;border-radius:10px;">`).join("")
           : product.emoji}
       </div>
       <h3>${product.name}</h3>
@@ -87,4 +77,67 @@ function renderCart() {
   $("cartTotal").textContent = money(total);
 
   $("cartItems").innerHTML = cart.length
-    ? cart
+    ? cart.map(item => `
+      <div class="cart-item">
+        <div class="cart-emoji">${item.emoji}</div>
+        <div class="cart-item-info">
+          <strong>${item.name}</strong>
+          <small>${money(item.price)} c/u</small>
+        </div>
+        <div class="qty">
+          <button onclick="changeQty(${item.id}, -1)">−</button>
+          <span>${item.qty}</span>
+          <button onclick="changeQty(${item.id}, 1)">+</button>
+        </div>
+      </div>
+    `).join("")
+    : "<p style='text-align:center;color:#999;padding:40px 10px'>Tu carrito está vacío 🐾</p>";
+}
+
+function openCart() {
+  $("cart").classList.add("open");
+  $("overlay").classList.add("show");
+}
+
+function closeCart() {
+  $("cart").classList.remove("open");
+  $("overlay").classList.remove("show");
+}
+
+$("search").addEventListener("input", e => {
+  search = e.target.value;
+  renderProducts();
+});
+
+$("openCart").addEventListener("click", openCart);
+$("closeCart").addEventListener("click", closeCart);
+$("overlay").addEventListener("click", closeCart);
+
+$("clearCart").addEventListener("click", () => {
+  cart = [];
+  renderCart();
+});
+
+$("whatsapp").addEventListener("click", () => {
+  if (!cart.length) {
+    alert("Agrega productos al carrito primero 💗");
+    return;
+  }
+
+  const phone = "56912345678"; // CAMBIA ESTE NÚMERO POR EL TUYO
+  let message = "Hola Boofi 💗 Quiero realizar este pedido:\n\n";
+
+  cart.forEach(item => {
+    message += `• ${item.name} x${item.qty} - ${money(item.price * item.qty)}\n`;
+  });
+
+  const total = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+  message += `\nTotal: ${money(total)}\n\n¡Gracias! ✨`;
+
+  window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, "_blank");
+});
+
+renderCategories();
+renderProducts();
+renderCart();
+
