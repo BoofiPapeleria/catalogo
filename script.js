@@ -175,8 +175,11 @@ let currentCategory = "Todos";
 let search = "";
 let cart = [];
 
-const $ = id => document.getElementById(id);
-const money = value => "$" + value.toLocaleString("es-CL");
+if (typeof document === "undefined") {
+  // This file is intended for a browser page with the matching HTML elements.
+} else {
+  const $ = id => document.getElementById(id);
+  const money = value => "$" + value.toLocaleString("es-CL");
 
 function escapeHTML(value) {
   const element = document.createElement("div");
@@ -411,5 +414,6 @@ document.addEventListener("keydown", event => {
 });
 
 renderCategories();
-renderProducts();
-renderCart();
+  renderProducts();
+  renderCart();
+}
