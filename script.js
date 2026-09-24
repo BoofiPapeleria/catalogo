@@ -357,12 +357,59 @@ $("whatsapp").addEventListener("click", () => {
 
 document.addEventListener("click", event => {
   const categoryButton = event.target.closest("[data-category]");
+
   if (categoryButton) {
     setCategory(categoryButton.dataset.category);
     return;
   }
 
   const addButton = event.target.closest("[data-add-id]");
+
   if (addButton) {
     addToCart(Number(addButton.dataset.addId));
-    return
+    return;
+  }
+
+  const qtyButton = event.target.closest("[data-qty-id]");
+
+  if (qtyButton) {
+    changeQty(
+      Number(qtyButton.dataset.qtyId),
+      Number(qtyButton.dataset.qtyChange)
+    );
+    return;
+  }
+
+  const carouselButton = event.target.closest(".prev, .next");
+
+  if (!carouselButton) return;
+
+  const container = carouselButton.closest(".product-images");
+  const slides = [...container.querySelectorAll(".slide")];
+
+  if (slides.length < 2) return;
+
+  let index = slides.findIndex(slide => slide.classList.contains("active"));
+
+  if (index === -1) index = 0;
+
+  slides[index].classList.remove("active");
+
+  if (carouselButton.classList.contains("next")) {
+    index = (index + 1) % slides.length;
+  } else {
+    index = (index - 1 + slides.length) % slides.length;
+  }
+
+  slides[index].classList.add("active");
+});
+
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape") {
+    closeCart();
+  }
+});
+
+renderCategories();
+renderProducts();
+renderCart();
