@@ -5,7 +5,7 @@ const products = [
     category: "Pegamentos",
     price: 1300,
     images: ["images/pegamento-liquido.png"],
-    desc: "Pegamento de adherencia fuerte y duradera, ideal para materiales ligeros."
+    desc: " Fórmula de alta adherencia, ideal para manualidades, oficina y colegio."
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ const products = [
     category: "Pegamentos",
     price: 2500,
     images: ["images/pegamento-magico.png"],
-    desc: "Masilla reutilizable y removible, perfecta para decorar superficies lisas."
+    desc: "¡Moldea, pega y reutiliza! Masilla adhesiva removible y versátil, perfecta para fijar objetos sin dañar superficies."
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ const products = [
     category: "Pegamentos",
     price: 1800,
     images: ["images/pegamento-cinta8m.png"],
-    desc: "Cinta de 8 mm, ideal para pegar de manera rápida y sin manchas."
+    desc: "Aplicación rápida y limpia, sin manchas. Aplicación rápida y limpia, sin manchas."
   },
   {
     id: 4,
@@ -29,7 +29,7 @@ const products = [
     category: "Pegamentos",
     price: 1500,
     images: ["images/pegamento-cinta6m.png"],
-    desc: "Cinta de 6 mm, ideal para pegar de manera rápida y sin manchas."
+    desc: "Compacto y práctico. Adhesión rápida en formato portátil, perfecto para tu estuche."
   },
   {
     id: 5,
@@ -41,7 +41,7 @@ const products = [
       "images/stickers2.png",
       "images/stickers3.png"
     ],
-    desc: "3 láminas de stickers transparentes con diseños kawaii, ideales para decorar."
+    desc: "Set de 3 láminas transparentes con ilustraciones kawaii, ideales para decorar."
   },
   {
     id: 6,
@@ -49,11 +49,11 @@ const products = [
     category: "Stickers",
     price: 800,
     images: ["images/stickers8.png", "images/stickers9.png"],
-    desc: "3 láminas de stickers transparentes con diseños kawaii, ideales para decorar."
+    desc: "Set de 3 láminas transparentes con ilustraciones kawaii, ideales para decorar."
   },
   {
     id: 7,
-    name: "Stickers Glitter",
+    name: "Stickers con Glitter",
     category: "Stickers",
     price: 800,
     images: [
@@ -62,7 +62,7 @@ const products = [
       "images/stickers6.png",
       "images/stickers7.png"
     ],
-    desc: "Lámina de stickers brillantes con diseños kawaii, perfectos para dar un toque especial a tus proyectos."
+    desc: "Diseños kawaii llenos de color y detalles brillantes para darle un toque mágico a tus proyectos."
   },
   {
     id: 8,
@@ -70,7 +70,7 @@ const products = [
     category: "Stickers",
     price: 1800,
     images: ["images/stickers-sanrio1.png", "images/stickers-sanrio2.png"],
-    desc: "20 láminas de stickers transparentes con diseños adorables de My Melody y Cinnamoroll."
+    desc: "La ternura de My Melody y Cinnamoroll en 20 láminas transparentes (7,5 x 7,5 cm). Ideal para agendas, cartas y scrapbooking."
   },
   {
     id: 9,
@@ -78,7 +78,7 @@ const products = [
     category: "Stickers",
     price: 1800,
     images: ["images/stickers-sanrio3.png", "images/stickers-sanrio4.png"],
-    desc: "25 láminas de stickers transparentes con diseños adorables de My Melody y Cinnamoroll."
+    desc: "La ternura de My Melody y Cinnamoroll en 20 láminas transparentes (7,5 x 7,5 cm). Ideal para agendas, cartas y scrapbooking."
   },
   {
     id: 10,
@@ -110,7 +110,7 @@ const products = [
     category: "Correctores",
     price: 1000,
     images: ["images/corrector-liquido.png"],
-    desc: "Corrector de secado rápido."
+    desc: "Punta metálica fina de alta precisión, secado rápido y cobertura perfecta."
   },
   {
     id: 14,
@@ -125,8 +125,8 @@ const products = [
     name: "Post-it Magnéticos",
     category: "Notas",
     price: 1200,
-    images: ["images/magneticas.png"],
-    desc: "50 notas magnéticas de 10,5 x 7 cm, perfectas para colocar sobre distintas superficies."
+    images: ["images/magneticas1.png","images/magneticas2.png"],
+    desc: "Coloridas y prácticas. 50 notas magnéticas (10,5 x 7 cm) que se adhieren a distintas superficies. ¡Perfectas para tu refri o pizarra!."
   },
   {
     id: 16,
@@ -134,7 +134,7 @@ const products = [
     category: "Notas",
     price: 1000,
     images: ["images/snoopy.png"],
-    desc: "40 notas adhesivas de Snoopy de 9 x 7,4 cm."
+    desc: "La ternura de Snoopy en tu escritorio. 40 notas adhesivas (9 x 7,4 cm) para darle un toque divertido a tus recordatorios."
   },
   {
     id: 17,
@@ -142,23 +142,23 @@ const products = [
     category: "Notas",
     price: 800,
     images: ["images/relojes.png"],
-    desc: "90 notas adhesivas con diseño de relojes análogos."
+    desc: "Organiza tu día con estilo. 90 notas adhesivas redondas con diseño de reloj análogo, ideales para planificar tareas."
   },
   {
     id: 18,
-    name: "Goma Cat Paw",
+    name: "Goma Cat Paw con Rodillo",
     category: "Gomas",
     price: 1500,
     images: ["images/gomagato1.png"],
-    desc: "Goma de borrar con rodillo de limpieza y lindo diseño de patita de gato."
+    desc: "Diseño de patita de gato con rodillo para limpieza. ¡Práctica y tierna!."
   },
   {
     id: 19,
-    name: "Goma Capibara",
+    name: "Goma Capibara Retráctil",
     category: "Gomas",
     price: 1500,
     images: ["images/gomacapi.png"],
-    desc: "Goma de borrar retráctil con tierna forma de capibara."
+    desc: "Adorable goma de borrar en forma de capibara. ¡Retráctil y coleccionable!"
   },
   {
     id: 20,
@@ -167,6 +167,62 @@ const products = [
     price: 1600,
     images: ["images/gomagato2.png"],
     desc: "Goma de borrar retráctil con forma de patita de gato y glitter."
+  }
+   {
+    id: 21,
+    name: "Sacapuntas Kuromi",
+    category: "Sacapuntas",
+    price: 1800,
+    images: ["images/skuromi.png"],
+    desc: "El estilo rebelde de Kuromi en un set práctico: sacapuntas + goma. Perfecto para fans de Sanrio que buscan utilidad con personalidad"
+  },
+  {
+    id: 22,
+    name: "Sacapuntas Burger",
+    category: "Sacapuntas",
+    price: 1500,
+    images: ["images/sburger.png"],
+    desc: "Un sacapuntas irresistible con diseño de hamburguesa 🍔. Divertido y coleccionable, ideal para darle un toque único y simpático a tu estuche."
+  },
+  {
+    id: 23,
+    name: "Sacapuntas Lucky Cat",
+    category: "Sacapuntas",
+    price: 1500,
+    images: ["images/slucky.png"],
+    desc: "La buena suerte siempre contigo ✨. Sacapuntas con diseño de gatito de la suerte, disponible en colores negro y rosado, para coleccionar y usar a diario"
+  }
+{
+    id: 24,
+    name: "Libreta Van Gogh",
+    category: "Van Gogh",
+    price: 1500,
+    images: ["images/l1.png","images/l2.png"],
+    desc: "Libreta de notas con 44 páginas rayadas, perfecta para escribir y coleccionar."
+  },
+  {
+    id: 25,
+    name: "Carpeta Sobre",
+    category: "Van Gogh",
+    price: 1500,
+    images: ["images/gomagato1.png"],
+    desc: "Organiza tus documentos con estilo. Carpeta tipo sobre tamaño A4 con diseño inspirado en Van Gogh."
+  },
+  {
+    id: 26,
+    name: "Washi Tape",
+    category: "Van Gogh",
+    price: 700,
+    images: ["images/washitape.png"],
+    desc: "Cintas decorativas de 5 m x 1,5 cm inspiradas en las obras más famosas de Van Gogh."
+  },
+  {
+    id: 26,
+    name: "Notas Adhesivas Van Gogh",
+    category: "Van Gogh",
+    price: 1600,
+    images: ["images/gomagato2.png"],
+    desc: "Un toque artístico en tu escritorio. 160 hojas adhesivas inspiradas en Van Gogh, puedes usarlas como separadores de páginas en libros y cuaderno."
   }
 ];
 
