@@ -86,7 +86,7 @@ const products = [
     category: "Correctores",
     price: 600,
     images: ["images/corrector-cinta12m1.png", "images/corrector-cinta12m2.png"],
-    desc: "Corrector de secado rápido."
+    desc: "Corrige de forma limpia y precisa con su envase ergonómico. Se aplica al instante, con secado rápido y sin manchas, ideal para uso diario en clases o trabajo."
   },
   {
     id: 11,
@@ -94,7 +94,7 @@ const products = [
     category: "Correctores",
     price: 800,
     images: ["images/corrector-cinta36.png"],
-    desc: "Corrector de secado rápido."
+    desc: "Compacto y eficiente. Con 36 m de cinta y un envase ergonómico, garantiza correcciones uniformes, de secado inmediato y sin manchas."
   },
   {
     id: 12,
@@ -102,7 +102,7 @@ const products = [
     category: "Correctores",
     price: 1000,
     images: ["images/corrector-cinta38.png"],
-    desc: "Corrector de secado rápido."
+    desc: "Corrige de manera rápida y uniforme con su envase ergonómico que facilita el agarre. La cinta de 38 m ofrece mayor duración, con aplicación limpia, secado inmediato y sin manchas."
   },
   {
     id: 13,
@@ -110,7 +110,7 @@ const products = [
     category: "Correctores",
     price: 1000,
     images: ["images/corrector-liquido.png"],
-    desc: "Punta metálica fina de alta precisión, secado rápido y cobertura perfecta."
+    desc: "Ligero y práctico. Su punta fina permite correcciones rápidas y precisas, ideal para tu día a día."
   },
   {
     id: 14,
@@ -167,7 +167,7 @@ const products = [
     price: 1600,
     images: ["images/gomagato2.png"],
     desc: "Goma de borrar retráctil con forma de patita de gato y glitter."
-  }
+  },
    {
     id: 21,
     name: "Sacapuntas Kuromi",
@@ -191,7 +191,7 @@ const products = [
     price: 1500,
     images: ["images/slucky.png"],
     desc: "La buena suerte siempre contigo ✨. Sacapuntas con diseño de gatito de la suerte, disponible en colores negro y rosado, para coleccionar y usar a diario"
-  }
+  },
 {
     id: 24,
     name: "Libreta Van Gogh",
