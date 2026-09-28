@@ -1,11 +1,11 @@
 const products = [
   {
     id: 1,
-    name: "Pegamento Líquido 150ml",
+    name: "Pegamento Líquido 50ml",
     category: "Pegamentos",
     price: 1300,
     images: ["images/pegamento-liquido.png"],
-    desc: " Fórmula de alta adherencia, ideal para manualidades, oficina y colegio."
+    desc: "¡Pegado fácil y sin complicaciones! Pegamento de alta adherencia para tus trabajos escolares, manualidades y proyectos de papelería."
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ const products = [
     category: "Pegamentos",
     price: 2500,
     images: ["images/pegamento-magico.png"],
-    desc: "¡Moldea, pega y reutiliza! Masilla adhesiva removible y versátil, perfecta para fijar objetos sin dañar superficies."
+    desc: "¡Pega, despega y vuelve a usar! Masilla adhesiva moldeable y reutilizable. Ideal para fijar objetos sin dañar superficies."
   },
   {
     id: 3,
@@ -21,15 +21,15 @@ const products = [
     category: "Pegamentos",
     price: 1800,
     images: ["images/cinta8m.png"],
-    desc: "Aplicación rápida y limpia, sin manchas. Aplicación rápida y limpia, sin manchas."
+    desc: "¡Pega fácil, rápido y sin ensuciar! Cinta adhesiva ideal para trabajos de papelería, tareas y manualidades."
   },
   {
     id: 4,
     name: "Pegamento en Cinta 6m",
     category: "Pegamentos",
-    price: 1500,
+    price: 1600,
     images: ["images/cinta6m.png"],
-    desc: "Compacto y práctico. Adhesión rápida en formato portátil, perfecto para tu estuche."
+    desc: "¡Tu aliado para pegar al instante! Cinta adhesiva práctica y fácil de usar. Ideal para papel, cartulina, tarjetas y pequeños proyectos."
   },
   {
     id: 5,
@@ -41,15 +41,15 @@ const products = [
       "images/stickers2.png",
       "images/stickers3.png"
     ],
-    desc: "Set de 3 láminas transparentes con ilustraciones kawaii, ideales para decorar."
+    desc: "¡Tu dosis diaria de ternura! Incluye 3 láminas de stickers transparentes con adorables diseños kawaii para personalizar todo lo que quieras."
   },
   {
     id: 6,
     name: "Set de Stickers",
     category: "Stickers",
     price: 800,
-    images: ["images/stickers8.png", "images/stickers9.png"],
-    desc: "Set de 3 láminas transparentes con ilustraciones kawaii, ideales para decorar."
+    images: ["images/stickers8.png", "images/stickers9.png", "images/stickers10.png"],
+    desc: "Set de 3 láminas transparentes con tiernas ilustraciones kawaii, perfectas para decorar."
   },
   {
     id: 7,
@@ -57,12 +57,11 @@ const products = [
     category: "Stickers",
     price: 800,
     images: [
-      "images/stickers4.png",
       "images/stickers5.png",
       "images/stickers6.png",
       "images/stickers7.png"
     ],
-    desc: "Diseños kawaii llenos de color y detalles brillantes para darle un toque mágico a tus proyectos."
+    desc: "¡Brillo y magia en cada detalle! 1 lámina de stickers brillantes con diseños kawaii para destacar tus trabajos y manualidades."
   },
   {
     id: 8,
@@ -78,7 +77,7 @@ const products = [
     category: "Stickers",
     price: 1800,
     images: ["images/sanrio3.png", "images/sanrio4.png"],
-    desc: "La ternura de My Melody y Cinnamoroll en 20 láminas transparentes, perfectas para decorar."
+    desc: "La ternura de My Melody y Cinnamoroll en 20 láminas transparentes, ideales para decorar."
   },
   {
     id: 10,
@@ -86,15 +85,15 @@ const products = [
     category: "Correctores",
     price: 600,
     images: ["images/corrector-12m1.png", "images/12m2.png", "images/12m3.png", "images/12m4.png"],
-    desc: "Corrige de manera rápida y uniforme con su envase ergonómico que facilita el agarre, de secado inmediato y sin manchas."
-  },
-  {
+    desc: "¡Correcciones rápidas y limpias! Práctico corrector compacto con adorable diseño de astronauta."
+    },
+    {
     id: 11,
     name: "Corrector en Cinta 36m",
     category: "Correctores",
     price: 800,
     images: ["images/36m.png"],
-    desc: "Corrige de manera rápida y uniforme con su envase ergonómico que facilita el agarre, de secado inmediato y sin manchas."
+    desc: "¡Diseño tierno y gran duración! Corrector compacto y fácil de usar para una aplicación suave al instante."
   },
   {
     id: 12,
@@ -102,31 +101,31 @@ const products = [
     category: "Correctores",
     price: 1000,
     images: ["images/38m1.png","images/38m2.png"],
-    desc: "Corrige de manera rápida y uniforme con su envase ergonómico que facilita el agarre, de secado inmediato y sin manchas."
+    desc: "¡Precisión y ergonomía! Corrector en cinta con tierno diseño kawaii que garantiza trazos limpios sin manchas."
   },
   {
     id: 13,
     name: "Corrector Líquido 8ml",
     category: "Correctores",
-    price: 1000,
+    price: 850,
     images: ["images/corrector-liquido.png"],
-    desc: "Ligero y práctico. Su punta fina permite correcciones rápidas y precisas, ideal para tu día a día."
+    desc: "Corrector con punta metálica de alta precisión y secado rápido. Ideal para uso escolar o de oficina."
   },
   {
     id: 14,
-    name: "Post-it Transparentes",
+    name: "Notas Transparentes",
     category: "Notas",
     price: 800,
     images: ["images/transparentes.png"],
-    desc: "Escribe sin miedo a rayar tus libros. 50 notas adhesivas transparentes (9,5 x 7 cm), perfectas para resaltar ideas sin tapar el texto."
+    desc: "¡Toma notas sin dañar tus libros! 50 notas adhesivas transparentes ideales para calcar, subrayar o escribir encima sin arruinar tus páginas."
   },
   {
     id: 15,
-    name: "Post-it Magnéticos",
+    name: "Notas Magnéticas",
     category: "Notas",
     price: 1200,
     images: ["images/magneticos1.png","images/magneticos2.png"],
-    desc: "Coloridas y prácticas. 50 notas magnéticas (10,5 x 7 cm) que se adhieren a distintas superficies."
+    desc: "¡Se adhieren a casi cualquier superficie sin pegamento! 50 notas estáticas de colores vibrantes para dejar recados visibles en todos lados. ("
   },
   {
     id: 16,
@@ -134,7 +133,7 @@ const products = [
     category: "Notas",
     price: 1000,
     images: ["images/snoopy.png"],
-    desc: "La ternura de Snoopy en tu escritorio. 40 notas adhesivas (9 x 7,4 cm) para darle un toque divertido a tus recordatorios."
+    desc: " ¡Añade un toque tierno a tus recordatorios! 40 notas adhesivas con diseños clásicos de Snoopy para organizar tu día con estilo."
   },
   {
     id: 17,
@@ -142,7 +141,7 @@ const products = [
     category: "Notas",
     price: 800,
     images: ["images/relojes.png"],
-    desc: " 90 notas adhesivas redondas con diseño de reloj análogo, ideales para organizarte."
+    desc: " ¡Organiza tus pendientes de forma creativa! Pack con 90 notas adhesivas con diseños de relojes para planificar tus horarios y tareas."
   },
   {
     id: 18,
@@ -150,7 +149,7 @@ const products = [
     category: "Gomas",
     price: 1500,
     images: ["images/gomagato1.png"],
-    desc: "Diseño de patita de gato con rodillo para limpieza. ¡Práctica y tierna!."
+    desc: "¡Limpieza y diversión en un solo producto! Goma de borrar con práctico rodillo integrado y tierno diseño de patita de gato."
   },
   {
     id: 19,
@@ -158,7 +157,7 @@ const products = [
     category: "Gomas",
     price: 1500,
     images: ["images/gomacapi.png"],
-    desc: "Adorable goma de borrar en forma de capibara. ¡Retráctil y coleccionable!"
+    desc: "¡Borra con estilo y ternura! Goma de borrar retráctil con un adorable diseño de capibara."
   },
   {
     id: 20,
@@ -166,7 +165,7 @@ const products = [
     category: "Gomas",
     price: 1600,
     images: ["images/gomagato2.png"],
-    desc: "Goma de borrar retráctil con forma de patita de gato y glitter."
+    desc: "¡Un toque brillante para tu estuche! Goma de borrar retráctil en forma de patita de gato con acabado con glitter."
   },
   {
     id: 21,
@@ -174,7 +173,7 @@ const products = [
     category: "Sacapuntas",
     price: 1800,
     images: ["images/skuromi.png"],
-    desc: "El estilo rebelde de Kuromi en un set práctico: sacapuntas + goma."
+    desc: "¡El estilo único de Kuromi en tu estuche! Práctico set que incluye sacapuntas y goma de borrar."
   },
   {
     id: 22,
@@ -182,7 +181,7 @@ const products = [
     category: "Sacapuntas",
     price: 1500,
     images: ["images/sburger.png"],
-    desc: "Un sacapuntas irresistible, ideal para darle un toque único y simpático a tu estuche."
+    desc: "¡El detalle más simpático para tu estuche! Un sacapuntas irresistible y original con diseño de hamburguesa."
   },
   {
     id: 23,
@@ -190,7 +189,7 @@ const products = [
     category: "Sacapuntas",
     price: 1500,
     images: ["images/slucky.png"],
-    desc: " Sacapuntas con diseño de gatito de la suerte, disponible en colores negro y rosado, para coleccionar y usar a diario"
+    desc: " ¡Atrae la buena suerte a tus estudios! Sacapuntas con diseño de gatito de la fortuna, disponible en colores negro y rosado."
   },
 {
     id: 24,
@@ -198,7 +197,7 @@ const products = [
     category: "Van Gogh",
     price: 1500,
     images: ["images/libreta1.png","images/libreta2.png"],
-    desc: "Libreta de notas con 44 páginas de líneas horizontales, perfecta para escribir y coleccionar."
+    desc: "¡Inspira tu escritura! Libreta de notas con 44 páginas de líneas horizontales, perfecta para escribir y coleccionar."
   },
   {
     id: 25,
@@ -206,7 +205,7 @@ const products = [
     category: "Van Gogh",
     price: 1500,
     images: ["images/sobre1.png","images/sobre2.png"],
-    desc: "Organiza tus documentos con estilo. Carpeta tipo sobre tamaño A4."
+    desc: "¡Organiza tus documentos con arte! Práctica carpeta tipo sobre en tamaño A4."
   },
   {
     id: 26,
@@ -214,7 +213,7 @@ const products = [
     category: "Van Gogh",
     price: 700,
     images: ["images/washi.png"],
-    desc: "Cintas decorativas de 5 m x 1,5 cm perfectas para decorar tus proyectos."
+    desc: "¡Decora con arte y color! Cintas adhesivas decorativas de 5 m x 1,5 cm inspiradas en las obras maestras de Van Gogh."
   },
   {
     id: 27,
@@ -222,7 +221,7 @@ const products = [
     category: "Van Gogh",
     price: 1600,
     images: ["images/post-vg.png"],
-    desc: " 160 notas adhesivas para separador las páginas en tus libros y cuadernos."
+    desc: " ¡Arte en cada página! 160 notas adhesivas ideales para usar como separadores y marcar tus lecturas favoritas con estilo."
   },
   {
     id: 28,
@@ -230,7 +229,7 @@ const products = [
     category: "Herramientas Corte",
     price: 2000,
     images: ["images/t1.png","images/t2.png"],
-    desc: "Tijera de bolsillo con diseño de patita de gato. Compacta, tierna y práctica para tu estuche."
+    desc: "¡Práctica y adorable! Tijera de bolsillo con diseño de patita de gato, ideal para llevar siempre en tu estuche."
   },
   {
     id: 29,
@@ -238,7 +237,7 @@ const products = [
     category: "Herramientas Corte",
     price: 2000,
     images: ["images/csanrio.png","images/csanrio1.png"],
-    desc: " Su cuchilla giratoria de 360° permite cortes suaves y detallados en cualquier dirección, ideal para manualidades y scrapbooking."
+    desc: "¡Cortes suaves y detallados! Cuchilla giratoria de 360° en cualquier dirección, perfecta para manualidades y scrapbooking."
   },
   {
     id: 30,
@@ -246,7 +245,7 @@ const products = [
     category: "Herramientas Corte",
     price: 2500,
     images: ["images/pcirculo.png"],
-    desc: "Perfora círculos perfectos de 2,54 cm. Ideal para decoración y proyectos DIY."
+    desc: "¡Círculos perfectos para tus creaciones! Perfora círculos de 2,54 cm, ideal para decoración y proyectos DIY."
   },
   {
     id: 31,
@@ -254,7 +253,7 @@ const products = [
     category: "Herramientas Corte",
     price: 3000,
     images: ["images/pbordes.png"],
-    desc: "Dale estilo a tus proyectos. Cortador para bordes y esquinas de papel, cartulina o fotos."
+    desc: "¡Dale un acabado profesional a tus proyectos! Cortador especializado para esquinas y bordes de papel, cartulina o fotos."
   },
   {
     id: 32,
@@ -262,7 +261,7 @@ const products = [
     category: "Herramientas Corte",
     price: 4500,
     images: ["images/guillotina1.png"],
-    desc: "Corta papel y cartulina con precisión. Incluye regla auxiliar expansible para mayor comodidad."
+    desc: "¡Cortes rectos y precisos sin esfuerzo! Ideal para papel y cartulina, incluye regla auxiliar expansible para mayor comodidad."
   },
   {
     id: 33,
@@ -270,7 +269,7 @@ const products = [
     category: "Herramientas Corte",
     price: 4500,
     images: ["images/guillotina2.png"],
-    desc: "Corta papel y cartulina con precisión. Incluye regla auxiliar expansible para mayor comodidad."
+    desc: "¡Cortes impecables sin esfuerzo! Diseñada para papel y cartulina con total precisión, incluye una regla auxiliar extensible para medir con máxima comodidad."
   },
   {
     id: 34,
@@ -278,7 +277,7 @@ const products = [
     category: "Herramientas Corte",
     price: 800,
     images: ["images/lapizcutter.png"],
-    desc: "Diseñado para cortes finos y exactos. Su formato ofrece control total y seguridad, perfecto para proyectos creativos y escolares.."
+    desc: "¡Control total y seguridad! Diseñado con formato de lápiz para cortes finos y exactos en tus proyectos creativos."
   },
   {
     id: 35,
@@ -286,7 +285,7 @@ const products = [
     category: "Herramientas Corte",
     price: 1500,
     images: ["images/carton.png"],
-    desc: "Práctico y resistente. Incluye dos cuchillas de repuesto para cortes limpios en cartón delgado y papel grueso."
+    desc: "¡Precisión y resistencia! Práctico cortador que incluye dos cuchillas de repuesto para cartón delgado y papel grueso."
   },
   {
     id: 36,
@@ -294,7 +293,7 @@ const products = [
     category: "Reglas",
     price: 1500,
     images: ["images/regla1.png"],
-    desc: "Regla con diseño de capibara. Combina precisión y estilo kawaii, ideal para quienes aman los detalles únicos."
+    desc: "¡Dale un toque tierno a tus útiles! Regla de 15 cm con diseño de capibara para quienes aman los detalles únicos."
   },
   {
     id: 37,
@@ -302,7 +301,7 @@ const products = [
     category: "Reglas",
     price: 1500,
     images: ["images/regla2.png"],
-    desc: "Regla de patita de gato con brillitos. Combina precisión y estilo kawaii, ideal para quienes aman los detalles únicos."
+    desc: "¡Brillitos y ternura en tus trazos! Regla de 15 cm con diseño de patita de gato y detalles brillantes."
   },
   {
     id: 38,
@@ -310,7 +309,7 @@ const products = [
     category: "Reglas",
     price: 1500,
     images: ["images/regla30.png"],
-    desc: "Resistente y práctica. Regla de acrílico transparente con forma de cubo en colores vibrantes. Perfecta para proyectos escolares y creativos."
+    desc: "¡Resistente y práctica! Regla de acrílico transparente con forma de cubo, perfecta para proyectos escolares y creativos."
   },
   {
     id: 39,
@@ -318,7 +317,7 @@ const products = [
     category: "Lápices",
     price: 4000,
     images: ["images/plumones.png"],
-    desc: "Set de 12 plumones de punta gruesa, perfectos para pizarras blancas. Escritura clara y fácil de borrar.."
+    desc: "¡Ideal para clases, reuniones o estudios! Set de 12 marcadores de punta gruesa, escritura fluida y limpieza rápida sin dejar marcas."
   },
   {
     id: 40,
@@ -326,23 +325,23 @@ const products = [
     category: "Lápices",
     price: 5500,
     images: ["images/metalicos.png"],
-    desc: "Set de 10 marcadores metalizados de alta calidad. Doble punta (fina y pincel) para trazos precisos y creativos."
+    desc: "¡Brillo y color en cada trazo! Set de 10 marcadores metalizados de alta calidad con doble punta (fina y pincel) para diseños creativos."
   },
   {
     id: 41,
-    name: "Lápiz Borrable",
+    name: "Lápiz Borrable Horóscopo",
     category: "Lápices",
     price: 500,
     images: ["images/borrableh.png"],
-    desc: "Tinta gel azul con punta fina de 0,5 mm. 100% borrable, ideal para escribir y corregir sin manchas."
+    desc: "¡Adiós a los errores! Tinta gel azul con punta fina de 0,5 mm, 100% borrable para mantener tus apuntes siempre perfectos."
   },
   {
     id: 42,
-    name: "Lápiz Borrable",
+    name: "Lápiz Borrable Kawaii",
     category: "Lápices",
     price: 500,
     images: ["images/borrablek.png"],
-    desc: "Tinta gel azul con punta fina de 0,5 mm. 100% borrable, ideal para escribir y corregir sin manchas."
+    desc: "¡Escribe, borra y corrige sin huellas! Tinta gel azul con punta fina de 0,5 mm, 100% borrable y limpia."
   },
   {
     id: 43,
@@ -350,7 +349,7 @@ const products = [
     category: "Lápices",
     price: 500,
     images: ["images/gelpink.png","images/gel3.png"],
-    desc: "Diseños coloridos con tinta gel negra y punta fina de 0,5 mm. Escritura fluida y estética kawaii"
+    desc: "¡Escritura fluida con tus personajes favoritos! Diseños inspirados en Blackpink, One Piece, Naruto y Sailor Moon, con tinta gel negra y punta fina de 0,5 mm para una estética impecable."
   },
   {
     id: 44,
@@ -358,32 +357,57 @@ const products = [
     category: "Lápices",
     price: 500,
     images: ["images/gelspy.png"],
-    desc: "Tinta gel negro con punta fina de 0,5 mm. 100% borrable, ideal para escribir y corregir sin manchas."
+    desc: "¡Adiós a los errores con tus personajes favoritos! Tinta gel negra con punta fina de 0,5 mm, 100% borrable y con diseños de Spy x Family para mantener tus apuntes siempre perfectos."
   },
   {
-    id: 42,
-    name: "Set de Lápices",
+    id: 45,
+    name: "Set de Lápices Mina",
     category: "Lápices",
     price: 1800,
     images: ["images/setminas.png"],
-    desc: "Dos lápices minas intercambiables en tonos pastel y tierno diseño."
+    desc: "¡Prácticos y adorables! Set de lápices con minas intercambiables y un tierno diseño de ositos al estilo kawaii."
   },
   {
-    id: 43,
-    name: "Portaminas",
+    id: 46,
+    name: "Portaminas Jujutsu Kaisens",
     category: "Lápices",
     price: 500,
     images: ["images/portaminas.png"],
-    desc: "Diseños coloridos con tinta gel negra y punta fina de 0,5 mm. Escritura fluida y estética kawaii"
+    desc: "¡Suma el poder de tus hechiceros favoritos a tu estuche! Portaminas de 0,5 mm con diseños detallados e ilustraciones de tus personajes favoritos."
   },
   {
-    id: 44,
+    id: 47,
     name: "Lápiz Infinito",
     category: "Lápices",
     price: 500,
     images: ["images/infinito.png"],
-    desc: "Tinta gel negro con punta fina de 0,5 mm. 100% borrable, ideal para escribir y corregir sin manchas."
+    desc: "¡Escribe y dibuja sin parar! Lápiz mina de larga duración con un tierno diseño kawaii, práctico y listo para acompañarte todos los días."
   },
+    {
+    id: 48,
+    name: "Lonchera Kawaii",
+    category: "Bolsos",
+    price: 4500,
+    images: ["images/l1.png","images/l2.png","images/l3.png","images/l4.png","images/l5.png","images/l6.png"],
+    desc: "¡Práctica, espaciosa y térmica! Ideal para transportar tu colación o almuerzo, cuenta con un compartimento principal con aislamiento, un bolsillo frontal y dos bolsillos laterales."
+  },
+  {
+    id: 49,
+    name: "Estuche Multiuso",
+    category: "Bolsos",
+    price: 4500,
+    images: ["images/e1.png","images/e2.png","images/e3.png","images/e4.png","images/e5.png","images/e6.png"],
+    desc: "¡Máxima organización para tus cosas! Mide 21,5x16,5 cm, cuenta con 2 bolsillos externos y 12 compartimientos en su interior para mantener todo en orden."
+  },
+  {
+    id:50,
+    name: "Puntero Manito",
+    category: "Puntero",
+    price: 2000,
+    images: ["images/puntero.png"],
+    desc: "¡Práctico, plegable y divertido! Se extiende hasta 68 cm, ideal para clases o presentaciones."
+  },
+];
 ];
 
 const categories = ["Todos", ...new Set(products.map(product => product.category))];
