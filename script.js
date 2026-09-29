@@ -369,7 +369,7 @@ const products = [
   },
   {
     id: 46,
-    name: "Portaminas Jujutsu Kaisens",
+    name: "Portaminas Jujutsu Kaisen",
     category: "Lápices",
     price: 500,
     images: ["images/portaminas.png"],
