@@ -84,7 +84,7 @@ const products = [
     name: "Corrector en Cinta 12m",
     category: "Correctores",
     price: 600,
-    images: ["images/corrector-12m1.png", "images/12m2.png", "images/12m3.png", "images/12m4.png"],
+    images: ["images/12m1.png", "images/12m2.png"],
     desc: "¡Correcciones rápidas y limpias! Práctico corrector compacto con adorable diseño de astronauta."
     },
     {
