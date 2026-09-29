@@ -48,7 +48,7 @@ const products = [
     name: "Set de Stickers",
     category: "Stickers",
     price: 800,
-    images: ["images/stickers8.png", "images/stickers9.png", "images/stickers10.png"],
+    images: ["images/stickers9.png", "images/stickers10.png"],
     desc: "Set de 3 láminas transparentes con tiernas ilustraciones kawaii, perfectas para decorar."
   },
   {
@@ -100,7 +100,7 @@ const products = [
     name: "Corrector en Cinta 38m",
     category: "Correctores",
     price: 1000,
-    images: ["images/38m1.png","images/38m2.png"],
+    images: ["images/38m1.png"],
     desc: "¡Precisión y ergonomía! Corrector en cinta con tierno diseño kawaii que garantiza trazos limpios sin manchas."
   },
   {
@@ -124,7 +124,7 @@ const products = [
     name: "Notas Magnéticas",
     category: "Notas",
     price: 1200,
-    images: ["images/magneticos1.png","images/magneticos2.png"],
+    images: ["images/magneticos1.png"],
     desc: "¡Se adhieren a casi cualquier superficie sin pegamento! 50 notas estáticas de colores vibrantes para dejar recados visibles en todos lados. ("
   },
   {
@@ -196,7 +196,7 @@ const products = [
     name: "Libreta Van Gogh",
     category: "Van Gogh",
     price: 1500,
-    images: ["images/libreta1.png","images/libreta2.png"],
+    images: ["images/libreta1.png"],
     desc: "¡Inspira tu escritura! Libreta de notas con 44 páginas de líneas horizontales, perfecta para escribir y coleccionar."
   },
   {
@@ -204,7 +204,7 @@ const products = [
     name: "Carpeta Sobre",
     category: "Van Gogh",
     price: 1500,
-    images: ["images/sobre1.png","images/sobre2.png"],
+    images: ["images/sobre1.png"],
     desc: "¡Organiza tus documentos con arte! Práctica carpeta tipo sobre en tamaño A4."
   },
   {
@@ -228,7 +228,7 @@ const products = [
     name: "Mini Tijera Cat Paw",
     category: "Herramientas Corte",
     price: 2000,
-    images: ["images/t1.png","images/t2.png"],
+    images: ["images/t1.png"],
     desc: "¡Práctica y adorable! Tijera de bolsillo con diseño de patita de gato, ideal para llevar siempre en tu estuche."
   },
   {
@@ -332,7 +332,7 @@ const products = [
     name: "Lápiz Borrable Horóscopo",
     category: "Lápices",
     price: 500,
-    images: ["images/borrableh.png"],
+    images: ["images/borrables1.png"],
     desc: "¡Adiós a los errores! Tinta gel azul con punta fina de 0,5 mm, 100% borrable para mantener tus apuntes siempre perfectos."
   },
   {
@@ -340,7 +340,7 @@ const products = [
     name: "Lápiz Borrable Kawaii",
     category: "Lápices",
     price: 500,
-    images: ["images/borrablek.png"],
+    images: ["images/borrables2.png"],
     desc: "¡Escribe, borra y corrige sin huellas! Tinta gel azul con punta fina de 0,5 mm, 100% borrable y limpia."
   },
   {
@@ -348,7 +348,7 @@ const products = [
     name: "Lápiz Gel",
     category: "Lápices",
     price: 500,
-    images: ["images/gelpink.png","images/gel3.png"],
+    images: ["images/gel1.png"],
     desc: "¡Escritura fluida con tus personajes favoritos! Diseños inspirados en Blackpink, One Piece, Naruto y Sailor Moon, con tinta gel negra y punta fina de 0,5 mm para una estética impecable."
   },
   {
@@ -396,7 +396,7 @@ const products = [
     name: "Estuche Multiuso",
     category: "Bolsos",
     price: 4500,
-    images: ["images/e1.png","images/e2.png","images/e3.png","images/e4.png","images/e5.png","images/e6.png"],
+    images: ["images/e1.png","images/e2.png","images/e3.png","images/e4.png","images/e5.png"],
     desc: "¡Máxima organización para tus cosas! Mide 21,5x16,5 cm, cuenta con 2 bolsillos externos y 12 compartimientos en su interior para mantener todo en orden."
   },
   {
