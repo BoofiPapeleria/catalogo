@@ -408,7 +408,6 @@ const products = [
     desc: "¡Práctico, plegable y divertido! Se extiende hasta 68 cm, ideal para clases o presentaciones."
   },
 ];
-];
 
 const categories = ["Todos", ...new Set(products.map(product => product.category))];
 let currentCategory = "Todos";
