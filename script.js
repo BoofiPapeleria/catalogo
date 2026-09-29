@@ -241,7 +241,7 @@ const products = [
   },
   {
     id: 30,
-    name: "Perforadora Circular",
+    name: "Perforadora de Circulos",
     category: "Herramientas de Corte",
     price: 2500,
     images: ["images/pcirculo.png"],
@@ -257,7 +257,7 @@ const products = [
   },
   {
     id: 32,
-    name: "Mini Guillotina Portátil",
+    name: "Mini Guillotina",
     category: "Herramientas de Corte",
     price: 4500,
     images: ["images/guillotina1.png"],
@@ -265,7 +265,7 @@ const products = [
   },
   {
     id: 33,
-    name: "Mini Guillotina Portátil",
+    name: "Mini Guillotina",
     category: "Herramientas de Corte",
     price: 4500,
     images: ["images/guillotina2.png"],
@@ -329,7 +329,7 @@ const products = [
   },
   {
     id: 41,
-    name: "Lápiz Borrable Horóscopo",
+    name: "Lápiz Borrable: Horóscopo",
     category: "Lápices",
     price: 500,
     images: ["images/borrables1.png"],
@@ -337,7 +337,7 @@ const products = [
   },
   {
     id: 42,
-    name: "Lápiz Borrable Kawaii",
+    name: "Lápiz Borrable: Kawaii",
     category: "Lápices",
     price: 500,
     images: ["images/borrables2.png"],
@@ -345,15 +345,15 @@ const products = [
   },
   {
     id: 43,
-    name: "Lápiz Gel",
+    name: "Lápiz Gel ",
     category: "Lápices",
     price: 500,
     images: ["images/gel1.png"],
-    desc: "¡Escritura fluida con tus personajes favoritos! Diseños inspirados en Blackpink, One Piece, Naruto y Sailor Moon, con tinta gel negra y punta fina de 0,5 mm para una estética impecable."
+    desc: "¡Escritura fluida con tus personajes favoritos! Diseños inspirados en Blackpink, One Piece y Naruto, con tinta gel negra y punta fina de 0,5 mm para una estética impecable."
   },
   {
     id: 44,
-    name: "Lápiz SpyxFamily",
+    name: "Lápiz Spy x Family",
     category: "Lápices",
     price: 500,
     images: ["images/gelspy.png"],
