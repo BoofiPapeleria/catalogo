@@ -234,15 +234,15 @@ const products = [
   {
     id: 29,
     name: "Cortador 360° Sanrio",
-    category: "Herramientas Corte",
+    category: "Herramientas de Corte",
     price: 2000,
-    images: ["images/csanrio.png","images/csanrio1.png"],
+    images: ["images/csanrio1.png"],
     desc: "¡Cortes suaves y detallados! Cuchilla giratoria de 360° en cualquier dirección, perfecta para manualidades y scrapbooking."
   },
   {
     id: 30,
     name: "Perforadora Circular",
-    category: "Herramientas Corte",
+    category: "Herramientas de Corte",
     price: 2500,
     images: ["images/pcirculo.png"],
     desc: "¡Círculos perfectos para tus creaciones! Perfora círculos de 2,54 cm, ideal para decoración y proyectos DIY."
@@ -250,7 +250,7 @@ const products = [
   {
     id: 31,
     name: "Cortador de Bordes",
-    category: "Herramientas Corte",
+    category: "Herramientas de Corte",
     price: 3000,
     images: ["images/pbordes.png"],
     desc: "¡Dale un acabado profesional a tus proyectos! Cortador especializado para esquinas y bordes de papel, cartulina o fotos."
@@ -258,7 +258,7 @@ const products = [
   {
     id: 32,
     name: "Mini Guillotina Portátil",
-    category: "Herramientas Corte",
+    category: "Herramientas de Corte",
     price: 4500,
     images: ["images/guillotina1.png"],
     desc: "¡Cortes rectos y precisos sin esfuerzo! Ideal para papel y cartulina, incluye regla auxiliar expansible para mayor comodidad."
@@ -266,7 +266,7 @@ const products = [
   {
     id: 33,
     name: "Mini Guillotina Portátil",
-    category: "Herramientas Corte",
+    category: "Herramientas de Corte",
     price: 4500,
     images: ["images/guillotina2.png"],
     desc: "¡Cortes impecables sin esfuerzo! Diseñada para papel y cartulina con total precisión, incluye una regla auxiliar extensible para medir con máxima comodidad."
@@ -274,7 +274,7 @@ const products = [
   {
     id: 34,
     name: "Lápiz Cortador",
-    category: "Herramientas Corte",
+    category: "Herramientas de Corte",
     price: 800,
     images: ["images/lapizcutter.png"],
     desc: "¡Control total y seguridad! Diseñado con formato de lápiz para cortes finos y exactos en tus proyectos creativos."
@@ -282,7 +282,7 @@ const products = [
   {
     id: 35,
     name: "Corta Carton Delgado",
-    category: "Herramientas Corte",
+    category: "Herramientas de Corte",
     price: 1500,
     images: ["images/carton.png"],
     desc: "¡Precisión y resistencia! Práctico cortador que incluye dos cuchillas de repuesto para cartón delgado y papel grueso."
@@ -353,7 +353,7 @@ const products = [
   },
   {
     id: 44,
-    name: "Lápiz Borrable",
+    name: "Lápiz SpyxFamily",
     category: "Lápices",
     price: 500,
     images: ["images/gelspy.png"],
@@ -405,6 +405,22 @@ const products = [
     category: "Puntero",
     price: 2000,
     images: ["images/puntero.png"],
+    desc: "¡Práctico, plegable y divertido! Se extiende hasta 68 cm, ideal para clases o presentaciones."
+  },
+   {
+    id:51,
+    name: "Corrector + Pegamento en Cinta",
+    category: "Corrector",
+    price: 2000,
+    images: ["images/corrector-pegamento.png"],
+    desc: "¡Práctico, plegable y divertido! Se extiende hasta 68 cm, ideal para clases o presentaciones."
+  },
+   {
+    id:52,
+    name: "Esquelas + Sobres Cinnamoroll",
+    category: "Sanrio",
+    price: 2000,
+    images: ["images/esquela.png"],
     desc: "¡Práctico, plegable y divertido! Se extiende hasta 68 cm, ideal para clases o presentaciones."
   },
 ];
