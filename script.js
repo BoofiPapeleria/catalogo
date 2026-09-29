@@ -226,7 +226,7 @@ const products = [
   {
     id: 28,
     name: "Mini Tijera Cat Paw",
-    category: "Herramientas Corte",
+    category: "Herramientas de Corte",
     price: 2000,
     images: ["images/t1.png"],
     desc: "¡Práctica y adorable! Tijera de bolsillo con diseño de patita de gato, ideal para llevar siempre en tu estuche."
@@ -386,7 +386,7 @@ const products = [
     {
     id: 48,
     name: "Lonchera Kawaii",
-    category: "Bolsos",
+    category: "Loncheras y Estuches",
     price: 4500,
     images: ["images/l1.png","images/l2.png","images/l3.png","images/l4.png","images/l5.png","images/l6.png"],
     desc: "¡Práctica, espaciosa y térmica! Ideal para transportar tu colación o almuerzo, cuenta con un compartimento principal con aislamiento, un bolsillo frontal y dos bolsillos laterales."
@@ -394,7 +394,7 @@ const products = [
   {
     id: 49,
     name: "Estuche Multiuso",
-    category: "Bolsos",
+    category: "Loncheras y Estuches",
     price: 4500,
     images: ["images/e1.png","images/e2.png","images/e3.png","images/e4.png","images/e5.png"],
     desc: "¡Máxima organización para tus cosas! Mide 21,5x16,5 cm, cuenta con 2 bolsillos externos y 12 compartimientos en su interior para mantener todo en orden."
@@ -410,18 +410,18 @@ const products = [
    {
     id:51,
     name: "Corrector + Pegamento en Cinta",
-    category: "Corrector",
-    price: 2000,
+    category: "Correctores",
+    price: 1500,
     images: ["images/corrector-pegamento.png"],
-    desc: "¡Práctico, plegable y divertido! Se extiende hasta 68 cm, ideal para clases o presentaciones."
+    desc: "."
   },
    {
     id:52,
     name: "Esquelas + Sobres Cinnamoroll",
     category: "Sanrio",
-    price: 2000,
+    price: 1500,
     images: ["images/esquela.png"],
-    desc: "¡Práctico, plegable y divertido! Se extiende hasta 68 cm, ideal para clases o presentaciones."
+    desc: ""
   },
 ];
 
