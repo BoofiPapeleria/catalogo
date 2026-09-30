@@ -389,7 +389,7 @@ const products = [
     category: "Loncheras y Estuches",
     price: 4500,
     images: ["images/l1.png","images/l2.png","images/l3.png","images/l4.png","images/l5.png","images/l6.png"],
-    desc: "¡Práctica, espaciosa y térmica! Ideal para transportar tu comida, cuenta con un bolsillo frontal y dos bolsillos laterales."
+    desc: "¡Práctica, espaciosa y térmica! Lonchera con adorable diseño kawaii, cuenta con un práctico bolsillo frontal y dos bolsillos laterales."
    },
    {
     id: 49,
@@ -397,7 +397,7 @@ const products = [
     category: "Loncheras y Estuches",
     price: 4500,
     images: ["images/e1.png","images/e2.png","images/e3.png","images/e4.png","images/e5.png"],
-    desc: "¡Máxima la organización de tus cosas! Cuenta con 2 bolsillos externos y 12 compartimientos en su interior para mantener todo en orden."
+    desc: "¡Todo en su lugar y sin enredos! Estuche con 2 bolsillos externos y 12 compartimientos interiores para organizar tus cosas con total comodidad."
   },
   {
     id:50,
@@ -409,11 +409,11 @@ const products = [
   },
    {
     id:51,
-    name: "Corrector + Pegamento en Cinta",
+    name: "Corrector y Pegamento 2 en 1",
     category: "Correctores",
     price: 1500,
     images: ["images/corrector-pegamento.png"],
-    desc: "."
+    desc: "¡Dos herramientas esenciales en un solo formato! Práctico accesorio compacto que combina corrector y pegamento en cinta para llevar siempre en tu estuche."
   },
    {
     id:52,
@@ -421,7 +421,7 @@ const products = [
     category: "Sanrio",
     price: 1500,
     images: ["images/esquela.png"],
-    desc: ""
+    desc: "¡Envía mensajes llenos de ternura! Set de hojas de carta decoradas con líneas y sobres a juego con adorables diseños de Cinnamoroll."
   },
 ];
 
