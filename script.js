@@ -1,6 +1,6 @@
 const products = [
   {
-    id: 1,
+    id: 48,
     name: "Pegamento Líquido 50ml",
     category: "Pegamentos",
     price: 1300,
@@ -8,7 +8,7 @@ const products = [
     desc: "¡Pegado fácil y sin complicaciones! Pegamento de alta adherencia para tus trabajos escolares, manualidades y proyectos de papelería."
   },
   {
-    id: 2,
+    id: 49,
     name: "Masilla Mágica 35gr",
     category: "Pegamentos",
     price: 2500,
@@ -384,7 +384,7 @@ const products = [
     desc: "¡Escribe y dibuja sin parar! Lápiz mina de larga duración con un tierno diseño kawaii, práctico y listo para acompañarte todos los días."
   },
     {
-    id: 48,
+    id: 1,
     name: "Lonchera Kawaii",
     category: "Loncheras y Estuches",
     price: 4500,
@@ -392,7 +392,7 @@ const products = [
     desc: "¡Práctica, espaciosa y térmica! Lonchera con adorable diseño kawaii, cuenta con un práctico bolsillo frontal y dos bolsillos laterales."
    },
    {
-    id: 49,
+    id: 2,
     name: "Estuche Multiuso",
     category: "Loncheras y Estuches",
     price: 4500,
