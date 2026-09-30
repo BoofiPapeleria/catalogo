@@ -390,8 +390,8 @@ const products = [
     price: 4500,
     images: ["images/l1.png","images/l2.png","images/l3.png","images/l4.png","images/l5.png","images/l6.png"],
     desc: "¡Práctica, espaciosa y térmica! Ideal para transportar tu comida, cuenta con un bolsillo frontal y dos bolsillos laterales."
-  },
-    {
+   },
+   {
     id: 49,
     name: "Estuche Multiuso",
     category: "Loncheras y Estuches",
